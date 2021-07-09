@@ -1,3 +1,7 @@
 /.metadata/
+<<<<<<< HEAD
+.metadata
+=======
 node_modules
 application.properties
+>>>>>>> 64f0a2c44077fc2f241831ca78fc98a2c30a387a
