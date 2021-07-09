@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 
 
 import com.revature.beans.Pet;
+import com.revature.utils.HibernateUtil;
 
 /*
  * This worked when I tested before we learned Spring Boot.
