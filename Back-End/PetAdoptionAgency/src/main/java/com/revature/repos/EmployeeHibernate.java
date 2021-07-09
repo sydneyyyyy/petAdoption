@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.beans.*;
 
-@Repository
-public interface EmployeeHibernate extends JpaRepository<Employee, Integer> {
+
+public interface EmployeeHibernate {
 
 }

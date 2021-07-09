@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.beans.*;
 
-@Repository
-public interface CustomerHibernate extends JpaRepository<Customer, Integer> {
+
+public interface CustomerHibernate {
 
 }

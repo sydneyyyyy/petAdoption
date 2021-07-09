@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.beans.Breed;
 
-@Repository
-public interface BreedHibernate extends JpaRepository<Breed, Integer> {
+
+public interface BreedHibernate {
 
 }
