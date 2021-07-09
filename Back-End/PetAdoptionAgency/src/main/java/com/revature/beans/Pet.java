@@ -22,10 +22,7 @@ public class Pet {
 	
 	private String name;
 	
-	@ManyToOne
-	@JoinColumn(name = "sid")
-	private Species species;
-	
+		
 	@ManyToOne
 	@JoinColumn(name = "bid")
 	private Breed breed;
@@ -44,15 +41,11 @@ public class Pet {
 	}
 	
 
-	
-
-
-	public Pet(int id, String name, Species species, Breed breed, String size, int age, String gender, double price,
-			boolean available, byte[] image) {
+	public Pet(int id, String name, Breed breed, String size, int age, String gender, double price, boolean available,
+			byte[] image) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.species = species;
 		this.breed = breed;
 		this.size = size;
 		this.age = age;
@@ -64,8 +57,6 @@ public class Pet {
 
 
 
-
-
 	public int getId() {
 		return id;
 	}
@@ -74,18 +65,7 @@ public class Pet {
 		this.id = id;
 	}
 
-		
-
-	public Species getSpecies() {
-		return species;
-	}
-
-
-	public void setSpecies(Species species) {
-		this.species = species;
-	}
-
-
+	
 	public Breed getBreed() {
 		return breed;
 	}
@@ -155,9 +135,6 @@ public class Pet {
 	}
 
 
-
-
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -173,12 +150,8 @@ public class Pet {
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((size == null) ? 0 : size.hashCode());
-		result = prime * result + ((species == null) ? 0 : species.hashCode());
 		return result;
 	}
-
-
-
 
 
 	@Override
@@ -220,24 +193,19 @@ public class Pet {
 				return false;
 		} else if (!size.equals(other.size))
 			return false;
-		if (species == null) {
-			if (other.species != null)
-				return false;
-		} else if (!species.equals(other.species))
-			return false;
 		return true;
 	}
 
 
-
-
-
 	@Override
 	public String toString() {
-		return "Pet [id=" + id + ", name=" + name + ", species=" + species + ", breed=" + breed + ", size=" + size
-				+ ", age=" + age + ", gender=" + gender + ", price=" + price + ", available=" + available + ", image="
-				+ Arrays.toString(image) + "]";
+		return "Pet [id=" + id + ", name=" + name + ", breed=" + breed + ", size=" + size + ", age=" + age + ", gender="
+				+ gender + ", price=" + price + ", available=" + available + ", image=" + Arrays.toString(image) + "]";
 	}
+
+
+
+
 
 
 
