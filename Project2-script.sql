@@ -18,6 +18,8 @@ alter table breed add column sid int references species(id);
 
 alter table pet drop column sid;
 
+alter table pet 
+alter column image type varchar(255);
 
 --Update Statements--
 update breed 
