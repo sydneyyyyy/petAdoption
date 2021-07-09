@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity(name = "Breed")
@@ -18,13 +20,21 @@ public class Breed {
 	@Column(name="bname", insertable = false, updatable = false)
 	private String bname;
 	
+	@ManyToOne
+	@JoinColumn(name = "sid")
+	private Species species;
+	
 	public Breed() {}
 	
-	public Breed(int id, String bName) {
+	
+
+	public Breed(int id, String bname, Species species) {
 		super();
 		this.id = id;
-		this.bname = bName;
+		this.bname = bname;
+		this.species = species;
 	}
+
 
 
 	public int getId() {
@@ -37,14 +47,30 @@ public class Breed {
 	}
 
 
-	public String getbName() {
+	
+
+	public String getBname() {
 		return bname;
 	}
 
 
-	public void setbName(String bName) {
-		this.bname = bName;
+
+	public void setBname(String bname) {
+		this.bname = bname;
 	}
+
+
+
+	public Species getSpecies() {
+		return species;
+	}
+
+
+
+	public void setSpecies(Species species) {
+		this.species = species;
+	}
+
 
 
 	@Override
@@ -53,8 +79,10 @@ public class Breed {
 		int result = 1;
 		result = prime * result + ((bname == null) ? 0 : bname.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((species == null) ? 0 : species.hashCode());
 		return result;
 	}
+
 
 
 	@Override
@@ -73,14 +101,24 @@ public class Breed {
 			return false;
 		if (id != other.id)
 			return false;
+		if (species == null) {
+			if (other.species != null)
+				return false;
+		} else if (!species.equals(other.species))
+			return false;
 		return true;
 	}
 
 
+
 	@Override
 	public String toString() {
-		return "Breed [id=" + id + ", bName=" + bname + "]";
+		return "Breed [id=" + id + ", bname=" + bname + ", species=" + species + "]";
 	}
+
+
+
+	
 	
 	
 }
