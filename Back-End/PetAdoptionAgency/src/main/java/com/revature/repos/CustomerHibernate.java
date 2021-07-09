@@ -1,5 +1,11 @@
 package com.revature.repos;
 
-public class CustomerHibernate {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.revature.beans.*;
+
+@Repository
+public interface CustomerHibernate extends JpaRepository<Customer, Integer> {
 
 }
