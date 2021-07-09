@@ -7,15 +7,15 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.revature.beans.Pet;
-import com.revature.utils.HibernateUtil;
 
+import com.revature.beans.Pet;
 
 /*
  * This worked when I tested before we learned Spring Boot.
  * Not sure we need it now that the PetRepo is available...
  */
 public class PetHibernate implements PetRepo {
+
 
 	public List<Pet> getAll(){
 		Session s = HibernateUtil.getSession();

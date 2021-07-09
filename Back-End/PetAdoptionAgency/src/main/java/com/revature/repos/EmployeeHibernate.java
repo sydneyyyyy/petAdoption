@@ -1,5 +1,11 @@
 package com.revature.repos;
 
-public class EmployeeHibernate {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.revature.beans.*;
+
+@Repository
+public interface EmployeeHibernate extends JpaRepository<Employee, Integer> {
 
 }
