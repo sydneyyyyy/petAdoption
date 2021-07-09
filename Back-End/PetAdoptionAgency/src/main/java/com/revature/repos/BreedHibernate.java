@@ -1,11 +1,11 @@
 package com.revature.repos;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.revature.beans.Breed;
 
 @Repository
-public interface BreedHibernate extends JpaRepository<Breed, Integer> {
+public interface BreedHibernate extends CrudRepository<Breed, Integer> {
 
 }

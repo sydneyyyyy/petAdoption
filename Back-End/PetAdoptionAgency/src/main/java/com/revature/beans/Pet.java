@@ -32,7 +32,7 @@ public class Pet {
 	private String gender;
 	private double price;
 	private boolean available;
-	private byte[] image;
+	private String image;
 	
 	
 	
@@ -42,7 +42,7 @@ public class Pet {
 	
 
 	public Pet(int id, String name, Breed breed, String size, int age, String gender, double price, boolean available,
-			byte[] image) {
+			String image) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -101,13 +101,17 @@ public class Pet {
 	}
 
 	
-	public byte[] getImage() {
+	
+
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(byte[] image) {
+
+	public void setImage(String image) {
 		this.image = image;
 	}
+
 
 	public double getPrice() {
 		return price;
@@ -135,6 +139,9 @@ public class Pet {
 	}
 
 
+	
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -144,7 +151,7 @@ public class Pet {
 		result = prime * result + ((breed == null) ? 0 : breed.hashCode());
 		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
 		result = prime * result + id;
-		result = prime * result + Arrays.hashCode(image);
+		result = prime * result + ((image == null) ? 0 : image.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(price);
@@ -179,7 +186,10 @@ public class Pet {
 			return false;
 		if (id != other.id)
 			return false;
-		if (!Arrays.equals(image, other.image))
+		if (image == null) {
+			if (other.image != null)
+				return false;
+		} else if (!image.equals(other.image))
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -200,8 +210,11 @@ public class Pet {
 	@Override
 	public String toString() {
 		return "Pet [id=" + id + ", name=" + name + ", breed=" + breed + ", size=" + size + ", age=" + age + ", gender="
-				+ gender + ", price=" + price + ", available=" + available + ", image=" + Arrays.toString(image) + "]";
+				+ gender + ", price=" + price + ", available=" + available + ", image=" + image + "]";
 	}
+
+
+	
 
 
 
