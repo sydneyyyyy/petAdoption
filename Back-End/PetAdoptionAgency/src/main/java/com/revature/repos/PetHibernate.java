@@ -1,20 +1,12 @@
 package com.revature.repos;
 
-import java.util.List;
-
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.revature.beans.Pet;
-import com.revature.utils.HibernateUtil;
 
-
-/*
- * This worked when I tested before we learned Spring Boot.
- * Not sure we need it now that the PetRepo is available...
- */
-public class PetHibernate {
+@Repository
+public interface PetHibernate extends JpaRepository<Pet, Integer> {
 
 	public List<Pet> getAll(){
 		Session s = HibernateUtil.getSession();
