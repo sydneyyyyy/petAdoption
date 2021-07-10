@@ -21,9 +21,11 @@ private EmployeeHibernate eh;
 
 	@Override
 	public List<Employee> getAll() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
 		return (List<Employee>) eh.findAll();
 	}
+	
+	
 
 	@Override
 	public Employee getEmployeeById(int id) {
@@ -48,6 +50,18 @@ private EmployeeHibernate eh;
 	public Employee addEmployee(Employee e) {
 		// TODO Auto-generated method stub
 		return eh.save(e);
+	}
+
+	@Override
+	public Employee login(String un, String pw) {
+		// TODO Auto-generated method stub
+		Employee emp = eh.findByUsername(un);
+		if(emp != null) {
+			if(emp.getPassword().equals(pw)) {
+				return emp;
+			}
+		}
+		return null;
 	}
 
 }

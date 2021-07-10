@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.gson.Gson;
 import com.revature.beans.Employee;
 import com.revature.beans.Pet;
 import com.revature.services.EmployeeServicesImpl;
@@ -25,7 +26,7 @@ import com.revature.services.EmployeeServicesImpl;
 public class EmployeeController {
 	
 	private EmployeeServicesImpl es;
-	//public Gson gson = new Gson();
+	public Gson gson = new Gson();
 	@Autowired
 	public EmployeeController(EmployeeServicesImpl eServ) {
 		this.es = eServ;
@@ -74,6 +75,15 @@ public class EmployeeController {
 	public boolean deleteEmployee(@PathVariable("id") int id) {
 		Employee e = es.getEmployeeById(id);
 		return es.deleteEmployee(e);
+	}
+	
+	@PostMapping(path="/login", consumes = "application/json", produces="application/json")
+	@ResponseStatus(value=HttpStatus.OK)
+	public Employee login(@RequestBody String emp) {
+		
+		Employee e = gson.fromJson(emp, Employee.class);
+		
+		return es.login(e.getUsername(), e.getPassword());
 	}
 
 }
