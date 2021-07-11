@@ -80,6 +80,12 @@ public class PetServicesImpl implements PetServices{
 		
 		return pets;
 	}
+
+	@Override
+	public List<Pet> getByAvailable(Boolean avail) {
+		// TODO Auto-generated method stub
+		return pr.findByAvailable(avail);
+	}
 	
 	
 
