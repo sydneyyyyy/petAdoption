@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.beans.Breed;
+import com.revature.beans.Species;
 import com.revature.repos.*;
 
 @Service
@@ -13,9 +14,11 @@ public class BreedServicesImpl implements BreedServices {
 	
 	private BreedHibernate bh;
 	
+	
 	@Autowired
 	public BreedServicesImpl (BreedHibernate bh) {
 		this.bh = bh;
+		
 	}
 
 	@Override
@@ -48,6 +51,12 @@ public class BreedServicesImpl implements BreedServices {
 	public Breed addBreed(Breed b) {
 		// TODO Auto-generated method stub
 		return bh.save(b);
+	}
+
+	@Override
+	public List<Breed> getBySpecies(Species species) {
+		// TODO Auto-generated method stub
+		return bh.findBySpecies(species);
 	}
 
 }
