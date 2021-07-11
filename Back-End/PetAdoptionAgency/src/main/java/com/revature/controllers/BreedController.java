@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,22 +15,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-//import com.google.gson.Gson;
+import com.revature.beans.Breed;
 import com.revature.beans.Pet;
+import com.revature.services.BreedServicesImpl;
 import com.revature.services.PetServicesImpl;
 
-
-
 @RestController
-@RequestMapping("/pets")
+@RequestMapping("/breeds")
 @CrossOrigin(origins = "http://localhost:8080")
-public class PetController {
-
-	private PetServicesImpl ps;
+public class BreedController {
+	
+	private BreedServicesImpl bs;
 	//public Gson gson = new Gson();
 	@Autowired
-	public PetController(PetServicesImpl petServ) {
-		this.ps = petServ;
+	public BreedController(BreedServicesImpl bServ) {
+		this.bs = bServ;
 	}
 	
 	//@GetMapping()
@@ -42,49 +40,31 @@ public class PetController {
 	//}
 	
 	@GetMapping(produces="application/json")
-	public List<Pet> getAllPets(){
+	public List<Breed> getAllPets(){
 		
-		List<Pet> pets = ps.getAll();
-		return pets;
+		List<Breed> breed = bs.getAll();
+		return breed;
 	} 
 	
 	@GetMapping("/{id}")
-	public Pet getById(@PathVariable("id") int id) {
-		Pet pet = ps.getPetById(id);
-		return pet;
+	public Breed getById(@PathVariable("id") int id) {
+		Breed breed = bs.getBreedById(id);
+		return breed;
 	}
 	
-	@GetMapping("/available/{isAvailable}")
-	public List<Pet> getByAvailable(@PathVariable("isAvailable") Boolean isAv){
-		List<Pet> pets = ps.getByAvailable(isAv);
-		return pets;
-	}
-	
-	@GetMapping("/breed/{bId}")
-	public List<Pet> getByBreed(@PathVariable("bId") Integer bId){
-		List<Pet> pets = ps.getByBreed(bId);
-		return pets;
-	}
-	
-	@GetMapping("/species/{sId}")
-	public List<Pet> getbySpecies(@PathVariable("sId") Integer sId){
-		List<Pet> pets = ps.getBySpecies(sId);
-		return pets;
-	}
-	
-	@PostMapping(path="/addPet", consumes = "application/json", produces="application/json")
+	@PostMapping(path="/addBreed", consumes = "application/json", produces="application/json")
 	@ResponseStatus(value=HttpStatus.OK)
-	public Pet addPet(@RequestBody Pet pet) {
+	public Breed addBreed(@RequestBody Breed breed) {
 		
 		//Pet p = gson.fromJson(petJson, Pet.class);		
-		return ps.addpet(pet);
+		return bs.addBreed(breed);
 	}
 	
 	@PutMapping(path="/{id}")
 	@ResponseStatus(value=HttpStatus.OK)
-	public Pet updatePet(@PathVariable("id") int id, @RequestBody Pet pet) {
-		if (id == pet.getId()) {
-			return ps.updatePet(pet);
+	public Breed updateBreed(@PathVariable("id") int id, @RequestBody Breed breed) {
+		if (id == breed.getId()) {
+			return bs.updateBreed(breed);
 		}
 		return null;
 		
@@ -92,11 +72,9 @@ public class PetController {
 	
 	@DeleteMapping(path="/{id}")
 	@ResponseStatus(value=HttpStatus.OK)
-	public boolean deletePet(@PathVariable("id") int id) {
-		Pet p = ps.getPetById(id);
-		return ps.deletePet(p);
+	public boolean deleteBreed(@PathVariable("id") int id) {
+		Breed b = bs.getBreedById(id);
+		return bs.deleteBreed(b);
 	}
-	
-	
-	
+
 }

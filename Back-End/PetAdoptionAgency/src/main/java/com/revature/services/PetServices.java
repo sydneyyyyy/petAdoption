@@ -18,4 +18,10 @@ public interface PetServices {
 	public boolean deletePet(Pet p);
 	
 	public Pet addpet(Pet p);
+	
+	public List<Pet> getByBreed(Integer bId);
+	
+	public List<Pet> getBySpecies(Integer sId);
+	
+	public List<Pet> getByAvailable(Boolean avail);
 }
