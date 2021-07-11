@@ -54,6 +54,12 @@ public class PetController {
 		return pet;
 	}
 	
+	@GetMapping("/available/{isAvailable}")
+	public List<Pet> getByAvailable(@PathVariable("isAvailable") Boolean isAv){
+		List<Pet> pets = ps.getByAvailable(isAv);
+		return pets;
+	}
+	
 	@GetMapping("/breed/{bId}")
 	public List<Pet> getByBreed(@PathVariable("bId") Integer bId){
 		List<Pet> pets = ps.getByBreed(bId);

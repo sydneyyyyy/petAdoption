@@ -136,4 +136,10 @@ public class PetHibernate implements PetRepo {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Pet> findByAvailable(Boolean avail) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

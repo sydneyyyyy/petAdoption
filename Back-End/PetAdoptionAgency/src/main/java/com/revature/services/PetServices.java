@@ -22,4 +22,6 @@ public interface PetServices {
 	public List<Pet> getByBreed(Integer bId);
 	
 	public List<Pet> getBySpecies(Integer sId);
+	
+	public List<Pet> getByAvailable(Boolean avail);
 }
