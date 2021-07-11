@@ -1,10 +1,6 @@
 package com.revature.repos;
 
-<<<<<<< HEAD
 
-
-public interface BreedHibernate {
-=======
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
@@ -16,7 +12,7 @@ import com.revature.beans.Species;
 
 @Repository
 public interface BreedHibernate extends CrudRepository<Breed, Integer> {
->>>>>>> develop
+
 
 	public List<Breed> findBySpecies(Species species);
 }
