@@ -54,6 +54,18 @@ public class PetController {
 		return pet;
 	}
 	
+	@GetMapping("/breed/{bId}")
+	public List<Pet> getByBreed(@PathVariable("bId") Integer bId){
+		List<Pet> pets = ps.getByBreed(bId);
+		return pets;
+	}
+	
+	@GetMapping("/species/{sId}")
+	public List<Pet> getbySpecies(@PathVariable("sId") Integer sId){
+		List<Pet> pets = ps.getBySpecies(sId);
+		return pets;
+	}
+	
 	@PostMapping(path="/addPet", consumes = "application/json", produces="application/json")
 	@ResponseStatus(value=HttpStatus.OK)
 	public Pet addPet(@RequestBody Pet pet) {
