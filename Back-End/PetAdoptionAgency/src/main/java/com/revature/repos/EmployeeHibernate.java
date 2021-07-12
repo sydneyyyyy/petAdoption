@@ -1,5 +1,6 @@
 package com.revature.repos;
 
+
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -14,6 +15,7 @@ import com.revature.utils.HibernateUtil;
 
 @Repository
 public interface EmployeeHibernate extends CrudRepository<Employee, Integer> {
+
 
 	public Employee findByUsername(String un);
 	
