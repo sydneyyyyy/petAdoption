@@ -15,7 +15,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  public getCustomer(customer: Customer['username']): Observable<Customer> {
+  public getCustomer(username: string): Observable<Customer> {
     return this.http.get<Customer>(`${this.apiServerUrl}/login`);
   }
 }
