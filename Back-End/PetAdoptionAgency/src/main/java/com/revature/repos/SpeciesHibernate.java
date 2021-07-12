@@ -8,4 +8,5 @@ import com.revature.beans.Species;
 @Repository
 public interface SpeciesHibernate extends CrudRepository<Species, Integer> {
 
+	
 }
