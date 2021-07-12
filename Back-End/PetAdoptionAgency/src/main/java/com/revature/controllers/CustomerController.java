@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.gson.Gson;
 import com.revature.beans.*;
 import com.revature.services.*;
 
@@ -24,7 +25,7 @@ import com.revature.services.*;
 public class CustomerController {
 	
 	private CustomerServicesImpl cs;
-	//public Gson gson = new Gson();
+	public Gson gson = new Gson();
 	@Autowired
 	public CustomerController(CustomerServicesImpl cServ) {
 		this.cs = cServ;
@@ -75,4 +76,12 @@ public class CustomerController {
 		return cs.deleteCustomer(c);
 	}
 
+	@PostMapping(path="/login", consumes = "application/json", produces="application/json")
+	@ResponseStatus(value=HttpStatus.OK)
+	public Customer login(@RequestBody String c) {
+		
+		Customer cus = gson.fromJson(c, Customer.class);
+		
+		return cs.login(cus.getUsername(), cus.getPassword());
+	}
 }

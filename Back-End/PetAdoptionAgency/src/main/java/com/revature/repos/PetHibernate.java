@@ -7,7 +7,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-
+import com.revature.beans.Breed;
 import com.revature.beans.Pet;
 import com.revature.utils.HibernateUtil;
 
@@ -128,5 +128,18 @@ public class PetHibernate implements PetRepo {
 	public void deleteAll() {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	@Override
+	public List<Pet> findByBreed(Breed breed) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Pet> findByAvailable(Boolean avail) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

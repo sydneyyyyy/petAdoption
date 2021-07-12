@@ -15,5 +15,9 @@ public List<Employee> getAll();
 	public boolean deleteEmployee(Employee e);
 	
 	public Employee addEmployee(Employee e);
+	
+	public Employee login(String un, String pw);
+	
+	public Employee getBySpecies(Integer sId);
 
 }
