@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.beans.Application;
+import com.revature.beans.Employee;
 import com.revature.beans.Pet;
+import com.revature.repos.EmployeeHibernate;
 import com.revature.services.ApplicationServicesImpl;
 
 @RestController
@@ -25,10 +27,12 @@ import com.revature.services.ApplicationServicesImpl;
 public class ApplicationController {
 	
 	private ApplicationServicesImpl as;
+	private EmployeeHibernate eh;
 	//public Gson gson = new Gson();
 	@Autowired
-	public ApplicationController(ApplicationServicesImpl appServ) {
+	public ApplicationController(ApplicationServicesImpl appServ, EmployeeHibernate eh) {
 		this.as = appServ;
+		this.eh = eh;
 	}
 	
 	//@GetMapping()
@@ -38,11 +42,22 @@ public class ApplicationController {
 	//	return ResponseEntity.ok(pets);
 	//}
 	
-	@GetMapping(produces="application/json")
-	public List<Application> getAllApplication(){
-		
+	@GetMapping(value="/{eId}" , produces="application/json")
+	public List<Application> getEmpApplications(@PathVariable("eId") int eId){
+		//Get the logged in user
+		Employee emp = eh.findById(eId).orElse(null);
 		List<Application> a = as.getAll();
-		return a;
+		List<Application> empAppList = as.getBySpecies(emp.getSpecies());
+		
+		//Need to filter out second approval for the employee's own species
+		for (Application app : a){
+			if ((app.getStatus().equals("secondApproval"))&&(app.getPet().getBreed().getSpecies() != emp.getSpecies())) {
+				empAppList.add(app);
+			};
+		}
+		
+		
+		return empAppList;
 	} 
 	
 	@GetMapping("/{id}")
@@ -50,6 +65,8 @@ public class ApplicationController {
 		Application a = as.getApplicationById(id);
 		return a;
 	}
+	
+	
 	
 	@PostMapping(path="/addApplication", consumes = "application/json", produces="application/json")
 	@ResponseStatus(value=HttpStatus.OK)
