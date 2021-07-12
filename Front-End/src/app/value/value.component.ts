@@ -9,26 +9,18 @@ import { environment } from "src/environments/environment";
 })
 export class ValueComponent implements OnInit {
   private apiServerUrl =  environment.apiBaseUrl;
-  pets: any;
+
   customers: any;
   employees: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getPets();
     this.getCustomers();
     this.getEmployees();
   }
 
-  getPets() {
-    return this.http.get(`${this.apiServerUrl}/pets`).subscribe(response => {
-      console.log(response);
-      this.pets = response;
-    }, error => {
-      console.log(error);
-    });
-  }
+  
 
   getCustomers() {
     return this.http.get(`${this.apiServerUrl}/customers`).subscribe(response => {
