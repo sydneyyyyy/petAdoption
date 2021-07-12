@@ -6,8 +6,10 @@ select * from breed;
 select * from pet;
 select * from application;
 select * from employee;
+select * from status;
 
 --Drops--
+drop table status;
 
 --Truncates--
 
@@ -18,8 +20,21 @@ alter table breed add column sid int references species(id);
 
 alter table pet drop column sid;
 
+alter table application drop column status;
+alter table application drop column bsupapproval;
+alter table application drop column secondapproval;
+alter table application add column status int references status(id);
+
 alter table pet 
 alter column image type varchar(255);
+
+alter table application add column status varchar;
+alter table application add column bsupapproval boolean;
+alter table application add column secondapproval boolean;
+
+alter table employee add unique (username);
+
+alter table customer add unique (username);
 
 --Update Statements--
 update breed 
@@ -38,6 +53,11 @@ lname varchar,
 username varchar,
 password varchar,
 information varchar);
+
+create table status(
+id serial primary key,
+status varchar,
+approved boolean);
 
 create table species(
 id serial primary key,
@@ -76,6 +96,15 @@ password varchar,
 sId int references species(id));
 
 --Insert Statements--
+
+insert into status 
+values
+(default, 'submitted', null),
+(default, 'first approval', null),
+(default, 'second approval', null),
+(default, 'accepted', null),
+(default, 'denied', null),
+(default, 'info requested', null);
 
 insert into species 
 values
