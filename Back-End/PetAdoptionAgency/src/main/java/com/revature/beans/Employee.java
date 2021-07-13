@@ -15,15 +15,15 @@ public class Employee {
 	@Column(name="id", insertable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="fname", insertable = false, updatable = false)
+	
 	private String fname;
-	@Column(name="lname", insertable = false, updatable = false)
+	
 	private String lname;
-	@Column(name="username", insertable = false, updatable = false)
+	
 	private String username;
-	@Column(name="password", insertable = false, updatable = false)
+	
 	private String password;
-	@Column(name="sid", insertable = false, updatable = false)
+	
 	private Integer sid;
 	
 	@OneToOne
