@@ -12,7 +12,7 @@ import com.revature.beans.*;
 @Repository
 public interface ApplicationHibernate extends CrudRepository<Application, Integer> {
 
-	public List<Application> findByPid(Integer pid);
+	public List<Application> findByPet(Integer pid);
 	
 	public List<Application> findByCustomer(Integer cid);
 
