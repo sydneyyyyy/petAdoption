@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public isLoggedIn = localStorage.getItem('currentUser');
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
+  public logout() {
+    console.log("logout clicked..");
+    localStorage.removeItem('currentUser');
+  }
 }
