@@ -54,7 +54,7 @@ public class CustomerController {
 	@PostMapping(path="/addCustomer", consumes = "application/json", produces="application/json")
 	@ResponseStatus(value=HttpStatus.OK)
 	public Customer addCustomer(@RequestBody Customer customer) {
-		
+		System.out.println(customer);
 		//Pet p = gson.fromJson(petJson, Pet.class);		
 		return cs.addCustomer(customer);
 	}
