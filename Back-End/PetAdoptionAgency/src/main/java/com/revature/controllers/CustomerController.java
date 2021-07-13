@@ -48,6 +48,7 @@ public class CustomerController {
 	@GetMapping("/{id}")
 	public Customer getById(@PathVariable("id") int id) {
 		Customer customer = cs.getCustomerById(id);
+		System.out.println(customer);
 		return customer;
 	}
 	
@@ -73,6 +74,7 @@ public class CustomerController {
 	@ResponseStatus(value=HttpStatus.OK)
 	public boolean deleteCustomer(@PathVariable("id") int id) {
 		Customer c = cs.getCustomerById(id);
+		
 		return cs.deleteCustomer(c);
 	}
 
