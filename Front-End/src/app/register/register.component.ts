@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
       console.log(response);
       let res = JSON.stringify(response);
       //localStorage.setItem('currentUser', res);
+
     });
     return this.customer;
   }
