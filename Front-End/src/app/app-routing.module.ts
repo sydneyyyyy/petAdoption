@@ -11,8 +11,8 @@ import { PetsComponent } from './pets/pets.component';
 const routes: Routes = [
   { path: 'customers/login', component: LoginComponent },
   { path: 'pets', component: PetsComponent, canActivate: [AuthGuard] },
-  { path: 'register', component: RegisterComponent },
-  { path: '', component: HomeComponent },
+  { path: 'customers/addCustomer', component: RegisterComponent },
+  { path: 'home', component: HomeComponent },
 ]
 
 @NgModule({

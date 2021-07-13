@@ -44,18 +44,13 @@ export class LoginComponent implements OnInit {
   public login(customer: Customer): Observable<Customer> {
     let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/login`, customer).subscribe(response => {
       console.log(response);
-    })
-    console.log(cust);
-    return null;
-    // .subscribe(response => {
-    //   console.log(response);
-    //   this.customers = response;
-    // }, error => {
-    //   console.log(error);
-    // });
-    
-    // localStorage.setItem('currentUser', cust);
-   
-    
+      let res = JSON.stringify(response);
+      localStorage.setItem('currentUser', res);
+    });
+    return this.customers;
   }
+
+  
+
+  
 }

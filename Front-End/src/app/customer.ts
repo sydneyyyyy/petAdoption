@@ -4,4 +4,5 @@ export interface Customer {
     lname: string;
     username: string;
     password: string;
+    information: string;
 }

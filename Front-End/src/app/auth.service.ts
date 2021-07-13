@@ -12,11 +12,5 @@ export class AuthService {
     localStorage.setItem('currentUser', 'access_token');
   }
 
-  public isLoggedIn() {
-    return localStorage.getItem('currentUser') !== null;
-  }
-
-  public logout() {
-    localStorage.removeItem('currentUser');
-  }
+  
 }
