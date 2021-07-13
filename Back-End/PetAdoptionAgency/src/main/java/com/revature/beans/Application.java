@@ -15,17 +15,14 @@ public class Application {
 	@Column(name="id", insertable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="pid", insertable = false, updatable = false)
-	private Integer pid;
-	@Column(name="cid", insertable = false, updatable = false)
-	private Integer cid;
-	@Column(name="subdate", insertable = false, updatable = false)
+	
+		
 	private Date subdate;
-	@Column(name="bsupapproval", insertable = false, updatable = false)
+	
 	private Boolean bsupapproval;
-	@Column(name="secondapproval", insertable = false, updatable = false)
+	
 	private Boolean secondapproval;
-	@Column(name="status", insertable = false, updatable = false)
+	
 	private String status;
 	
 	@OneToOne
@@ -38,12 +35,12 @@ public class Application {
 	
 	public Application() {}
 
-	public Application(int id, Integer pid, Integer cid, Date subdate, Boolean bsupapproval, Boolean secondapproval,
-			String status, Pet pet, Customer customer) {
+	
+
+	public Application(int id, Date subdate, Boolean bsupapproval, Boolean secondapproval, String status, Pet pet,
+			Customer customer) {
 		super();
 		this.id = id;
-		this.pid = pid;
-		this.cid = cid;
 		this.subdate = subdate;
 		this.bsupapproval = bsupapproval;
 		this.secondapproval = secondapproval;
@@ -52,24 +49,7 @@ public class Application {
 		this.customer = customer;
 	}
 
-	public Application(int id, Integer pid, Integer cid) {
-		super();
-		this.id = id;
-		this.pid = pid;
-		this.cid = cid;
-	}
 
-	public Application(int id, Integer pid, Integer cid, Date subdate, Boolean bsupapproval, Boolean secondapproval,
-			String status) {
-		super();
-		this.id = id;
-		this.pid = pid;
-		this.cid = cid;
-		this.subdate = subdate;
-		this.bsupapproval = bsupapproval;
-		this.secondapproval = secondapproval;
-		this.status = status;
-	}
 
 	public int getId() {
 		return id;
@@ -79,22 +59,7 @@ public class Application {
 		this.id = id;
 	}
 
-	public Integer getPid() {
-		return pid;
-	}
-
-	public void setPid(Integer pid) {
-		this.pid = pid;
-	}
-
-	public Integer getCid() {
-		return cid;
-	}
-
-	public void setCid(Integer cid) {
-		this.cid = cid;
-	}
-
+	
 	public Date getSubdate() {
 		return subdate;
 	}
@@ -143,21 +108,23 @@ public class Application {
 		this.customer = customer;
 	}
 
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((bsupapproval == null) ? 0 : bsupapproval.hashCode());
-		result = prime * result + ((cid == null) ? 0 : cid.hashCode());
 		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((pet == null) ? 0 : pet.hashCode());
-		result = prime * result + ((pid == null) ? 0 : pid.hashCode());
 		result = prime * result + ((secondapproval == null) ? 0 : secondapproval.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((subdate == null) ? 0 : subdate.hashCode());
 		return result;
 	}
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -173,11 +140,6 @@ public class Application {
 				return false;
 		} else if (!bsupapproval.equals(other.bsupapproval))
 			return false;
-		if (cid == null) {
-			if (other.cid != null)
-				return false;
-		} else if (!cid.equals(other.cid))
-			return false;
 		if (customer == null) {
 			if (other.customer != null)
 				return false;
@@ -189,11 +151,6 @@ public class Application {
 			if (other.pet != null)
 				return false;
 		} else if (!pet.equals(other.pet))
-			return false;
-		if (pid == null) {
-			if (other.pid != null)
-				return false;
-		} else if (!pid.equals(other.pid))
 			return false;
 		if (secondapproval == null) {
 			if (other.secondapproval != null)
@@ -213,12 +170,14 @@ public class Application {
 		return true;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Application [id=" + id + ", pid=" + pid + ", cid=" + cid + ", subdate=" + subdate + ", bsupapproval="
-				+ bsupapproval + ", secondapproval=" + secondapproval + ", status=" + status + ", pet=" + pet
-				+ ", customer=" + customer + "]";
+		return "Application [id=" + id + ", subdate=" + subdate + ", bsupapproval=" + bsupapproval + ", secondapproval="
+				+ secondapproval + ", status=" + status + ", pet=" + pet + ", customer=" + customer + "]";
 	}
+
 	
 	
 

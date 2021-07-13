@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
       lname: new FormControl('', [Validators.required]),
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
+      information: new FormControl('', [Validators.required]),
     });
   }
 
@@ -37,7 +38,8 @@ export class RegisterComponent implements OnInit {
     let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/addCustomer`, customer).subscribe(response => {
       console.log(response);
       let res = JSON.stringify(response);
-      // localStorage.setItem('currentUser', res);
+      //localStorage.setItem('currentUser', res);
+
     });
     return this.customer;
   }

@@ -17,7 +17,7 @@ public class Breed {
 	@Column(name="id", insertable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="bname", insertable = false, updatable = false)
+	
 	private String bname;
 	
 	@ManyToOne

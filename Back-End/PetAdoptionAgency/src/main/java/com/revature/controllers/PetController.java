@@ -75,7 +75,7 @@ public class PetController {
 	@PostMapping(path="/addPet", consumes = "application/json", produces="application/json")
 	@ResponseStatus(value=HttpStatus.OK)
 	public Pet addPet(@RequestBody Pet pet) {
-		
+		System.out.println(pet);
 		//Pet p = gson.fromJson(petJson, Pet.class);		
 		return ps.addpet(pet);
 	}

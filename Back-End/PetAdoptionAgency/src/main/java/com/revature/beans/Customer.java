@@ -11,17 +11,17 @@ public class Customer {
 	
 	@Id
 	@Column(name="id", insertable = false, updatable = false)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator="customer_id_seq")
 	private int id;
-	@Column(name="fname", insertable = false, updatable = false)
+	
 	private String fname;
-	@Column(name="lname", insertable = false, updatable = false)
+	
 	private String lname;
-	@Column(name="username", insertable = false, updatable = false)
+	
 	private String username;
-	@Column(name="password", insertable = false, updatable = false)
+	
 	private String password;
-	@Column(name="information", insertable = false, updatable = false)
+	
 	private String information;
 	
 	public Customer() {}

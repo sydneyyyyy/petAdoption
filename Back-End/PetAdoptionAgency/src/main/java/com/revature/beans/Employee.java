@@ -15,16 +15,16 @@ public class Employee {
 	@Column(name="id", insertable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="fname", insertable = false, updatable = false)
+	
 	private String fname;
-	@Column(name="lname", insertable = false, updatable = false)
+	
 	private String lname;
-	@Column(name="username", insertable = false, updatable = false)
+	
 	private String username;
-	@Column(name="password", insertable = false, updatable = false)
+	
 	private String password;
-	@Column(name="sid", insertable = false, updatable = false)
-	private Integer sid;
+	
+	
 	
 	@OneToOne
 	@JoinColumn(name="sid")
@@ -32,17 +32,19 @@ public class Employee {
 	
 	public Employee() {}
 
-	public Employee(int id, String fname, String lname, String username, String password, Integer sid,
-			Species species) {
+	
+
+	public Employee(int id, String fname, String lname, String username, String password, Species species) {
 		super();
 		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
 		this.username = username;
 		this.password = password;
-		this.sid = sid;
 		this.species = species;
 	}
+
+
 
 	public Employee(int id, String username, String password) {
 		super();
@@ -51,11 +53,7 @@ public class Employee {
 		this.password = password;
 	}
 
-	public Employee(int id, Integer sid) {
-		super();
-		this.id = id;
-		this.sid = sid;
-	}
+	
 
 	public Employee(String username, String password) {
 		super();
@@ -103,13 +101,7 @@ public class Employee {
 		this.password = password;
 	}
 
-	public Integer getSid() {
-		return sid;
-	}
-
-	public void setSid(Integer sid) {
-		this.sid = sid;
-	}
+	
 
 	public Species getSpecies() {
 		return species;
@@ -127,7 +119,6 @@ public class Employee {
 		result = prime * result + id;
 		result = prime * result + ((lname == null) ? 0 : lname.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((sid == null) ? 0 : sid.hashCode());
 		result = prime * result + ((species == null) ? 0 : species.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
@@ -159,11 +150,6 @@ public class Employee {
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (sid == null) {
-			if (other.sid != null)
-				return false;
-		} else if (!sid.equals(other.sid))
-			return false;
 		if (species == null) {
 			if (other.species != null)
 				return false;
@@ -180,8 +166,9 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", fname=" + fname + ", lname=" + lname + ", username=" + username + ", password="
-				+ password + ", sid=" + sid + ", species=" + species + "]";
+				+ password + ", species=" + species + "]";
 	}
+
 	
 	
 	

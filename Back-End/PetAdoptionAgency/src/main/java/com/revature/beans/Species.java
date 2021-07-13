@@ -15,7 +15,7 @@ public class Species {
 	@Column(name="id", insertable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="sname", insertable = false, updatable = false)
+	
 	private String sname;
 	
 	public Species() {}
