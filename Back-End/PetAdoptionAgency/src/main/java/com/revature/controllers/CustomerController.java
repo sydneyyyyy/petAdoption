@@ -48,13 +48,14 @@ public class CustomerController {
 	@GetMapping("/{id}")
 	public Customer getById(@PathVariable("id") int id) {
 		Customer customer = cs.getCustomerById(id);
+		System.out.println(customer);
 		return customer;
 	}
 	
 	@PostMapping(path="/addCustomer", consumes = "application/json", produces="application/json")
 	@ResponseStatus(value=HttpStatus.OK)
 	public Customer addCustomer(@RequestBody Customer customer) {
-		
+		System.out.println(customer);
 		//Pet p = gson.fromJson(petJson, Pet.class);		
 		return cs.addCustomer(customer);
 	}
@@ -73,6 +74,7 @@ public class CustomerController {
 	@ResponseStatus(value=HttpStatus.OK)
 	public boolean deleteCustomer(@PathVariable("id") int id) {
 		Customer c = cs.getCustomerById(id);
+		
 		return cs.deleteCustomer(c);
 	}
 
