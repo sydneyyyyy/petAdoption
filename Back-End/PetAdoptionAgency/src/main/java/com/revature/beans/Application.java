@@ -15,17 +15,17 @@ public class Application {
 	@Column(name="id", insertable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="pid", insertable = false, updatable = false)
+	
 	private Integer pid;
-	@Column(name="cid", insertable = false, updatable = false)
+	
 	private Integer cid;
-	@Column(name="subdate", insertable = false, updatable = false)
+	
 	private Date subdate;
-	@Column(name="bsupapproval", insertable = false, updatable = false)
+	
 	private Boolean bsupapproval;
-	@Column(name="secondapproval", insertable = false, updatable = false)
+	
 	private Boolean secondapproval;
-	@Column(name="status", insertable = false, updatable = false)
+	
 	private String status;
 	
 	@OneToOne
