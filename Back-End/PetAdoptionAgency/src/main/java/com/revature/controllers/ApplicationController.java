@@ -54,7 +54,7 @@ public class ApplicationController {
 			if ((app.getStatus().equals("submitted"))) {empAppList.add(app);}
 			else if ((app.getStatus().equals("secondApproval"))&&(app.getPet().getBreed().getSpecies() != emp.getSpecies())) {
 				empAppList.add(app);
-			};
+			}
 		}
 		
 		
@@ -83,6 +83,18 @@ public class ApplicationController {
 		if (id == app.getId()) {
 			return as.updateApplication(app);
 		}
+		if (app.getStatus().equals("submitted")) {
+			return as.updateApplication(app);
+		}else if (app.getBsupapproval().TRUE) {
+			app.setBsupapproval(true);
+			return as.updateApplication(app);
+		}else if (app.getSecondapproval().TRUE) {
+			app.setSecondapproval(true);
+			return as.updateApplication(app);
+		}else if (app.getSecondapproval().TRUE) {
+			app.setStatus("approved");
+			return as.updateApplication(app);
+		}
 		return null;
 		
 	}
@@ -91,6 +103,10 @@ public class ApplicationController {
 	@ResponseStatus(value=HttpStatus.OK)
 	public boolean deleteApplication(@PathVariable("id") int id) {
 		Application app = as.getApplicationById(id);
+//		if (app.getStatus().equals("denied")) {
+//		return as.deleteApplication(app);
+//		}
+//		return false;
 		return as.deleteApplication(app);
 	}
 
