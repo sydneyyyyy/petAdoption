@@ -1,4 +1,28 @@
 #bannerImg {
     width: 100%;
 }
+
+#image2 {
+    width: 100%;
+}
+
+div {
+    margin-top: 25px;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+div h3 {
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+    font-family: "Trirong", serif;
+    font-weight: bold;
+}
+
+div p {
+    margin: 0px;
+    padding-bottom: 20px;
+    font-family: "Trirong", serif;
+}
     
