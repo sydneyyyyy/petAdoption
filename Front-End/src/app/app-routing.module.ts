@@ -4,15 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
-import { AuthGuard } from './auth.guard';
+// import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './home/home.component';
 import { PetsComponent } from './pets/pets.component';
 
 const routes: Routes = [
   { path: 'customers/login', component: LoginComponent },
-  { path: 'pets', component: PetsComponent, canActivate: [AuthGuard] },
+  { path: 'pets', component: PetsComponent },
   { path: 'customers/addCustomer', component: RegisterComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
 ]
 
 @NgModule({

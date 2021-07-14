@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Customer } from '../customer';
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   private apiServerUrl = environment.apiBaseUrl;
   customers: any;
   
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.loginForm = new FormGroup({
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
@@ -46,7 +47,9 @@ export class LoginComponent implements OnInit {
       console.log(response);
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
+      window.location.reload();
     });
+    this.router.navigate(['pets']);
     return this.customers;
   }
 

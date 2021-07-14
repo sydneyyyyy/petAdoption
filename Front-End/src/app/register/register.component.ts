@@ -38,8 +38,7 @@ export class RegisterComponent implements OnInit {
     let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/addCustomer`, customer).subscribe(response => {
       console.log(response);
       let res = JSON.stringify(response);
-      //localStorage.setItem('currentUser', res);
-
+      localStorage.setItem('currentUser', res);
     });
     return this.customer;
   }
