@@ -81,7 +81,7 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		//to get by petId we first need to find all pets with species
 		//then for each pet with that species we want to find the application by PID and add it to appList
 		for (Application app : appList) {
-			if(!app.getBsupapproval()) {
+			if((app.getBsupapproval())||(app.getStatus().equals("denied"))) {
 				appList.remove(app);
 			}
 		}
