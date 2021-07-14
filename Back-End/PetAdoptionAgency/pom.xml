@@ -14,6 +14,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PetAdoptionAgency</name>
 	<description>Spring Boot Project 2</description>
+	<packaging>war</packaging>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
