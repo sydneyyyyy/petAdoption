@@ -48,12 +48,11 @@ public class ApplicationController {
 		this.cs = cs;
 	}
 	
-	//@GetMapping()
-	//public ResponseEntity<List<Pet>> getAllPets(){
-		
-	//	List<Pet> pets = ps.getAll();
-	//	return ResponseEntity.ok(pets);
-	//}
+	@GetMapping(produces="application/json")
+	public List<Application> getAllApplication(){
+		List<Application> apps = as.getAll();
+		return apps;
+	}
 	
 	@GetMapping(value="/{eId}" , produces="application/json")
 	public List<Application> getEmpApplications(@PathVariable("eId") int eId){
