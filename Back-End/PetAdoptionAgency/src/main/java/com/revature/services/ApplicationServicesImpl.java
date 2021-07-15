@@ -101,6 +101,12 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		return null;
 	}
 
+	@Override
+	public List<Application> getByCustomer(Integer cId) {
+		
+		return ah.findByCustomer(cId);
+	}
+
 	
 
 }
