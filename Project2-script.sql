@@ -146,6 +146,14 @@ values
 (default,'Angel Fish', 6),
 (default,'Star Fish', 6);
 
+insert into application 
+values
+(default, 5, 1, '2021-07-13', false, false, 'submitted'),
+(default, 2, 1, '2021-07-13', true, false, 'firstApproval'),
+(default, 35, 2, '2021-07-13', true, true, 'secondApproval'),
+(default, 52, 2, '2021-07-13', true, true, 'approved'),
+(default, 63, 1, '2021-07-13', false, false, 'denied');
+
 insert into pet --Dogs--
 values
 (default, 6, 'S', 4, 'M', 200, true, null, 'Stich'),
