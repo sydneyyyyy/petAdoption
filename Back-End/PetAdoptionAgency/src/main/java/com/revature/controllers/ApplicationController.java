@@ -31,10 +31,12 @@ import com.revature.services.PetServicesImpl;
 @CrossOrigin(origins = "http://localhost:8080")
 public class ApplicationController {
 	
+
 	private ApplicationServicesImpl as;	
 	private EmployeeServicesImpl es;
 	private CustomerServicesImpl cs;
 	private PetServicesImpl ps;
+
 	//public Gson gson = new Gson();
 	@Autowired
 	public ApplicationController(ApplicationServicesImpl appServ, EmployeeServicesImpl es, PetServicesImpl ps,CustomerServicesImpl cs ) {
@@ -103,11 +105,13 @@ public class ApplicationController {
 		}else if (app.getBsupapproval()) {
 			app.setStatus("Second Approval");
 			return as.updateApplication(app);
+
 		}else if (app.getSecondapproval()) {
 			app.setStatus("approved");
 			Pet p = app.getPet();
 			p.setAvailable(false);
 			ps.updatePet(p);
+
 			return as.updateApplication(app);
 		}
 		return null;
