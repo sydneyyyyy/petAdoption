@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import java.util.List;
 
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,6 +24,7 @@ import com.revature.services.SpeciesServicesImpl;
 @RequestMapping("/species")
 @CrossOrigin(origins = "http://localhost:8080")
 public class SpeciesController {
+	private static final Logger logger = LoggerFactory.getLogger(SpeciesController.class);
 	
 	private SpeciesServicesImpl ss;
 	
