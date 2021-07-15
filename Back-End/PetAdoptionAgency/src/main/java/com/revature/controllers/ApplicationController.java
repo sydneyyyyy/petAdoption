@@ -28,6 +28,7 @@ public class ApplicationController {
 	
 	private ApplicationServicesImpl as;
 	private EmployeeHibernate eh;
+	private Pet p;
 	//public Gson gson = new Gson();
 	@Autowired
 	public ApplicationController(ApplicationServicesImpl appServ, EmployeeHibernate eh) {
@@ -92,7 +93,7 @@ public class ApplicationController {
 			app.setSecondapproval(true);
 			return as.updateApplication(app);
 		}else if (app.getSecondapproval().TRUE) {
-			app.setStatus("approved");
+			p.setAvailable(false);
 			return as.updateApplication(app);
 		}
 		return null;
