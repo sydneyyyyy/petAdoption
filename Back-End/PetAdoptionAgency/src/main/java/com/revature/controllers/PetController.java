@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import java.util.List;
 
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,7 @@ import com.revature.services.PetServicesImpl;
 @RequestMapping("/pets")
 @CrossOrigin(origins = "http://localhost:8080")
 public class PetController {
+	private static final Logger logger = LoggerFactory.getLogger(PetController.class);
 
 	private PetServicesImpl ps;
 	//public Gson gson = new Gson();
