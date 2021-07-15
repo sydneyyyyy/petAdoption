@@ -16,11 +16,13 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.beans.Application;
+import com.revature.beans.Customer;
 import com.revature.beans.Employee;
 import com.revature.beans.Pet;
 import com.revature.repos.EmployeeHibernate;
 import com.revature.repos.PetRepo;
 import com.revature.services.ApplicationServicesImpl;
+import com.revature.services.CustomerServicesImpl;
 import com.revature.services.EmployeeServicesImpl;
 import com.revature.services.PetServicesImpl;
 
@@ -31,13 +33,15 @@ public class ApplicationController {
 	
 	private ApplicationServicesImpl as;	
 	private EmployeeServicesImpl es;
+	private CustomerServicesImpl cs;
 	private PetServicesImpl ps;
 	//public Gson gson = new Gson();
 	@Autowired
-	public ApplicationController(ApplicationServicesImpl appServ, EmployeeServicesImpl es, PetServicesImpl ps) {
+	public ApplicationController(ApplicationServicesImpl appServ, EmployeeServicesImpl es, PetServicesImpl ps,CustomerServicesImpl cs ) {
 		this.as = appServ;
 		this.es = es;
 		this.ps = ps;
+		this.cs = cs;
 	}
 	
 	//@GetMapping()
@@ -64,6 +68,12 @@ public class ApplicationController {
 		
 		
 		return empAppList;
+	} 
+	
+	@GetMapping(value="customer/{cId}" , produces="application/json")
+	public List<Application> getCustApplications(@PathVariable("cId") int cId){
+		
+		return as.getByCustomer(cId);
 	} 
 	
 	@GetMapping("/{id}")
