@@ -27,5 +27,5 @@ public List<Application> getAll();
 	//return a list of applications where the bAprrovalisTrue and the employee species is not the application species
 	public List<Application> getByStatus(String status);
 
-	
+	public List<Application> getByCustomer(Integer cId);
 }

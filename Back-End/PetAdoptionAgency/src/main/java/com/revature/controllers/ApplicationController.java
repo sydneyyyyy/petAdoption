@@ -16,24 +16,34 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.beans.Application;
+import com.revature.beans.Customer;
 import com.revature.beans.Employee;
 import com.revature.beans.Pet;
 import com.revature.repos.EmployeeHibernate;
+import com.revature.repos.PetRepo;
 import com.revature.services.ApplicationServicesImpl;
+import com.revature.services.CustomerServicesImpl;
+import com.revature.services.EmployeeServicesImpl;
+import com.revature.services.PetServicesImpl;
 
 @RestController
 @RequestMapping("/applications")
 @CrossOrigin(origins = "http://localhost:8080")
 public class ApplicationController {
 	
-	private ApplicationServicesImpl as;
-	private EmployeeHibernate eh;
-	private Pet p;
+
+	private ApplicationServicesImpl as;	
+	private EmployeeServicesImpl es;
+	private CustomerServicesImpl cs;
+	private PetServicesImpl ps;
+
 	//public Gson gson = new Gson();
 	@Autowired
-	public ApplicationController(ApplicationServicesImpl appServ, EmployeeHibernate eh) {
+	public ApplicationController(ApplicationServicesImpl appServ, EmployeeServicesImpl es, PetServicesImpl ps,CustomerServicesImpl cs ) {
 		this.as = appServ;
-		this.eh = eh;
+		this.es = es;
+		this.ps = ps;
+		this.cs = cs;
 	}
 	
 	//@GetMapping()
@@ -46,7 +56,7 @@ public class ApplicationController {
 	@GetMapping(value="/{eId}" , produces="application/json")
 	public List<Application> getEmpApplications(@PathVariable("eId") int eId){
 		//Get the logged in user
-		Employee emp = eh.findById(eId).orElse(null);
+		Employee emp = es.getEmployeeById(eId);
 		List<Application> a = as.getAll();
 		List<Application> empAppList = as.getBySpecies(emp.getSpecies());
 		
@@ -60,6 +70,12 @@ public class ApplicationController {
 		
 		
 		return empAppList;
+	} 
+	
+	@GetMapping(value="customer/{cId}" , produces="application/json")
+	public List<Application> getCustApplications(@PathVariable("cId") int cId){
+		
+		return as.getByCustomer(cId);
 	} 
 	
 	@GetMapping("/{id}")
@@ -86,14 +102,16 @@ public class ApplicationController {
 		}
 		if (app.getStatus().equals("submitted")) {
 			return as.updateApplication(app);
-		}else if (app.getBsupapproval().TRUE) {
-			app.setBsupapproval(true);
+		}else if (app.getBsupapproval()) {
+			app.setStatus("Second Approval");
 			return as.updateApplication(app);
-		}else if (app.getSecondapproval().TRUE) {
-			app.setSecondapproval(true);
-			return as.updateApplication(app);
-		}else if (app.getSecondapproval().TRUE) {
+
+		}else if (app.getSecondapproval()) {
+			app.setStatus("approved");
+			Pet p = app.getPet();
 			p.setAvailable(false);
+			ps.updatePet(p);
+
 			return as.updateApplication(app);
 		}
 		return null;
