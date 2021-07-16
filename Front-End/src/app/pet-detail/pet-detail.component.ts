@@ -16,14 +16,14 @@ export class PetDetailComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getPetById(id);
+    // this.getPetById(id);
   }
 
-  getPetById(id: number): Observable<Pet> {
-    return this.http.get<Pet>(`${this.apiServerUrl}/pets/${id}`).subscribe(response => {
-      console.log(response);
-    })
+  // getPetById(id: number): Observable<Pet> {
+  //   return this.http.get<Pet>(`${this.apiServerUrl}/pets/${id}`).subscribe(response => {
+  //     console.log(response);
+  //   })
     
-  }
+  // }
 
 }
