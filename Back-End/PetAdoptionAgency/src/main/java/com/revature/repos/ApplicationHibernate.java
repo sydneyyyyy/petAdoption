@@ -14,6 +14,6 @@ public interface ApplicationHibernate extends CrudRepository<Application, Intege
 
 	public List<Application> findByPet(Integer pid);
 	
-	public List<Application> findByCustomer(Integer cid);
+	public List<Application> findByCustomer(Customer customer);
 
 }
