@@ -1,11 +1,12 @@
 package com.revature.repos;
 
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-//test
+import com.revature.beans.Employee;
 
-public interface GenericHibernate {
+//test
+@Repository
+public interface GenericHibernate extends CrudRepository<Employee, Integer>{
 
 }
