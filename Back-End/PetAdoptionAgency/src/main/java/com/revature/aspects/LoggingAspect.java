@@ -38,6 +38,7 @@ public class LoggingAspect {
 			System.out.println("Exception: " + error.getMessage());
 			log.error(jp.getSignature().getName() + " failed to execute.");
 			log.error("Exception: " + error.getMessage());
+			log.error(error.getStackTrace());
 		}
 		
 //		@AfterThrowing(pointcut="execution(* com.revature.controllers.*.*(..))", throwing="exception")
