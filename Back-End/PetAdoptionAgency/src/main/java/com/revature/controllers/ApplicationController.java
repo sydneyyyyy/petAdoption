@@ -54,7 +54,9 @@ public class ApplicationController {
 		return apps;
 	}
 	
-	@GetMapping(value="employee/{eId}" , produces="application/json")
+
+	@GetMapping(value="/employee/{eId}" , produces="application/json")
+
 	public List<Application> getEmpApplications(@PathVariable("eId") int eId){
 		//Get the logged in user
 		Employee emp = es.getEmployeeById(eId);

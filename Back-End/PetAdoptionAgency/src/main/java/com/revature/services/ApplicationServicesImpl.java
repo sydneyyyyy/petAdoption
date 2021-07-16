@@ -80,7 +80,8 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		}
 		
 		for (Pet p : petList) {
-			appList.addAll(ah.findByPet(p.getId()));
+			
+			appList.addAll(ah.findByPet(p));
 		}
 		//to get by petId we first need to find all pets with species
 		//then for each pet with that species we want to find the application by PID and add it to appList
