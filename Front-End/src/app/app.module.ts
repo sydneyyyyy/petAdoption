@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { PetDetailComponent } from './pet-detail/pet-detail.component';
 
 
 
@@ -20,6 +21,7 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     HomeComponent,
     RegisterComponent,
+    PetDetailComponent,
 
   ],
   imports: [
