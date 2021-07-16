@@ -10,8 +10,7 @@ import com.revature.beans.Breed;
 import com.revature.beans.Pet;
 import com.revature.beans.Species;
 
-@Repository
-public interface BreedHibernate extends CrudRepository<Breed, Integer> {
+public interface BreedHibernate {
 
 
 	public List<Breed> findBySpecies(Species species);

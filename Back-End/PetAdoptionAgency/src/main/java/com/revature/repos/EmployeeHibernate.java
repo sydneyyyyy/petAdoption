@@ -13,8 +13,7 @@ import com.revature.beans.Pet;
 import com.revature.beans.Species;
 import com.revature.utils.HibernateUtil;
 
-@Repository
-public interface EmployeeHibernate extends CrudRepository<Employee, Integer> {
+public interface EmployeeHibernate {
 
 
 	public Employee findByUsername(String un);
