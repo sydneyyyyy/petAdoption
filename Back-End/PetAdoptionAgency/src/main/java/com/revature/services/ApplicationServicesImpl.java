@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 
 import com.revature.beans.Application;
 import com.revature.beans.Breed;
+import com.revature.beans.Customer;
 import com.revature.beans.Pet;
 import com.revature.beans.Species;
 import com.revature.repos.ApplicationHibernate;
 import com.revature.repos.BreedHibernate;
+import com.revature.repos.CustomerHibernate;
 import com.revature.repos.PetRepo;
 
 @Service
@@ -20,12 +22,14 @@ public class ApplicationServicesImpl implements ApplicationServices {
 	private ApplicationHibernate ah;
 	private PetRepo pr;
 	private BreedHibernate bh;
+	private CustomerHibernate ch;
 	
 	@Autowired
-	public ApplicationServicesImpl(ApplicationHibernate ah, PetRepo pr, BreedHibernate bh) {
+	public ApplicationServicesImpl(ApplicationHibernate ah, PetRepo pr, BreedHibernate bh, CustomerHibernate ch) {
 		this.ah = ah;
 		this.pr = pr;
 		this.bh = bh;
+		this.ch = ch;
 	}
 
 	@Override
@@ -104,7 +108,8 @@ public class ApplicationServicesImpl implements ApplicationServices {
 	@Override
 	public List<Application> getByCustomer(Integer cId) {
 		
-		return ah.findByCustomer(cId);
+		Customer c = ch.findById(cId).orElse(null);
+		return ah.findByCustomer(c);
 	}
 
 	

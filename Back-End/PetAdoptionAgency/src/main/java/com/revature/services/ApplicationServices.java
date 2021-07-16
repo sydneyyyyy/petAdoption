@@ -3,6 +3,7 @@ package com.revature.services;
 import java.util.List;
 
 import com.revature.beans.Application;
+import com.revature.beans.Customer;
 import com.revature.beans.Species;
 
 public interface ApplicationServices {
