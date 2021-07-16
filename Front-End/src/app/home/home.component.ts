@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Pet } from '../pet';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  private apiServerUrl = environment.apiBaseUrl;
+  pets: any;
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.getAdopted()
   }
 
-  
+  getAdopted() {
+    return this.http.get(`${this.apiServerUrl}/pets/available/false`).subscribe(response => {
+      console.log(response);
+      this.pets = response;
+    })
+  }
 
 }
+
+

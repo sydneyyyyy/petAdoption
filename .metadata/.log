@@ -3909,3 +3909,757 @@ java.util.concurrent.TimeoutException
 
 !ENTRY Activator 1 0 2021-07-15 15:44:12.762
 !MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-15 15:48:08.954
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-15 15:48:09.621
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.jface 2 0 2021-07-15 15:49:06.010
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-15 15:49:06.010
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ac596e6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b52187b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-15 16:23:39.843
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZLGGnzQc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-15 16:23:39.895
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZLGGnzQc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-15 16:23:40.101
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-15 16:23:40.102
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZLGGnzQc => OK
+!SESSION 2021-07-16 13:26:31.385 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=15.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -data C:\Users\User\Desktop\Project2\petAdoption -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-07-16 13:26:57.964
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-16 13:26:57.964
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47666b39,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2dbcee03,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:32.420
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:32.422
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@53bec2b0[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=884)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:32.596
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:32.877
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY Activator 1 0 2021-07-16 13:27:41.223
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-16 13:27:42.013
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:48.103
+!MESSAGE Boot LS startup time from start to initialized: 15493ms
+
+!ENTRY Activator 1 0 2021-07-16 13:27:49.438
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.565
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mjvFGaDOisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.625
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.650
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.651
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.671
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.672
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mjvFGaDO => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.760
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.768
+!MESSAGE buffering callback sts4.classpath.mjvFGaDO PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:52.769
+!MESSAGE executing callback sts4.classpath.mjvFGaDO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 13:27:54.782
+!MESSAGE executing callback sts4.classpath.mjvFGaDO FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-07-16 13:27:54.783
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY Activator 1 0 2021-07-16 13:28:13.053
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:28:52.771
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:28:53.462
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.ui 2 2 2021-07-16 13:28:55.819
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY Activator 1 0 2021-07-16 13:43:54.127
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:43:55.016
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:55:13.525
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:55:14.215
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:59:37.165
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:59:37.829
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:59:38.179
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.jface 2 0 2021-07-16 14:07:51.318
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-16 14:07:51.318
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46d2c993,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fd1a6aa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY Activator 1 0 2021-07-16 14:09:31.777
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:29.953
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:30.361
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:45.564
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:45.735
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:28.439
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:30.583
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:47.830
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.209
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.220
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.237
+!MESSAGE buffering callback sts4.classpath.mjvFGaDO PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.238
+!MESSAGE executing callback sts4.classpath.mjvFGaDO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.879
+!MESSAGE executing callback sts4.classpath.mjvFGaDO SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-07-16 14:19:51.647
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.923
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY Activator 1 0 2021-07-16 14:19:54.925
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.933
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.940
+!MESSAGE buffering callback sts4.classpath.mjvFGaDO PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.941
+!MESSAGE executing callback sts4.classpath.mjvFGaDO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:55.378
+!MESSAGE executing callback sts4.classpath.mjvFGaDO SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-07-16 14:19:55.388
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:57.061
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:58.589
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:20:00.476
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:30:47.974
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:30:48.193
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:33:06.944
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:33:07.130
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:34:34.849
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:34:35.027
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:42:03.984
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:42:05.712
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:42:06.466
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:01.330
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:01.990
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:02.381
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:19.014
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:29.111
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:45:31.261
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:45:31.272
+!MESSAGE classpath=97 entries
+
+!ENTRY Activator 1 0 2021-07-16 14:45:31.380
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:45:31.499
+!MESSAGE buffering callback sts4.classpath.mjvFGaDO PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:45:31.500
+!MESSAGE executing callback sts4.classpath.mjvFGaDO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:45:31.879
+!MESSAGE executing callback sts4.classpath.mjvFGaDO SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-07-16 14:45:32.889
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:33.668
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:34.289
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:45:36.117
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:47:28.843
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:47:28.953
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mjvFGaDO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:47:28.954
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.mjvFGaDO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:47:28.955
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:47:28.956
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mjvFGaDO => OK
+!SESSION 2021-07-16 14:49:33.488 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=15.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-07-16 14:50:15.728
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-16 14:50:15.728
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@176054b7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@531bec12,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:50:46.413
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:50:46.414
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7d75fea9[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=884)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:50:46.457
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:50:46.809
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY Activator 1 0 2021-07-16 14:50:58.904
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-16 14:50:59.528
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY Activator 1 0 2021-07-16 14:51:09.595
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:51:23.057
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-07-16 14:51:27.804
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:28.360
+!MESSAGE Boot LS startup time from start to initialized: 41868ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.345
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.oVahPSUjisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.378
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.390
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.392
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.393
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.393
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.oVahPSUj => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.407
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.414
+!MESSAGE buffering callback sts4.classpath.oVahPSUj PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:29.415
+!MESSAGE executing callback sts4.classpath.oVahPSUj 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:51:31.425
+!MESSAGE executing callback sts4.classpath.oVahPSUj FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-07-16 14:51:31.426
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY Activator 1 0 2021-07-16 15:02:44.984
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:02:46.813
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-07-16 15:02:47.711
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.ui 2 2 2021-07-16 15:03:00.549
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY Activator 1 0 2021-07-16 15:03:24.569
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:03:26.481
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:03:28.731
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY Activator 1 0 2021-07-16 15:03:28.736
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:03:28.745
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:03:28.764
+!MESSAGE buffering callback sts4.classpath.oVahPSUj PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:03:28.764
+!MESSAGE executing callback sts4.classpath.oVahPSUj 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:03:29.291
+!MESSAGE executing callback sts4.classpath.oVahPSUj SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-07-16 15:03:30.073
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:03:30.687
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:03:32.380
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:04.287
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.oVahPSUj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:04.288
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.oVahPSUj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:04.289
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:04.290
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.oVahPSUj => OK
+!SESSION 2021-07-16 15:04:09.935 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=15.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-07-16 15:04:23.655
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-16 15:04:23.655
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24563809,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41d84abb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:39.951
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:39.952
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@649b9234[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=884)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:39.958
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:40.050
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY Activator 1 0 2021-07-16 15:04:43.382
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-07-16 15:04:44.095
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY Activator 1 0 2021-07-16 15:04:52.272
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:04:57.310
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:58.711
+!MESSAGE Boot LS startup time from start to initialized: 18719ms
+
+!ENTRY org.eclipse.jface.text 4 0 2021-07-16 15:04:58.713
+!MESSAGE java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+!STACK 0
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1155)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1146)
+	... 6 more
+
+!ENTRY org.eclipse.jface.text 4 0 2021-07-16 15:04:58.720
+!MESSAGE java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+!STACK 0
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1155)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1146)
+	... 6 more
+
+!ENTRY org.eclipse.jface.text 4 0 2021-07-16 15:04:58.732
+!MESSAGE java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+!STACK 0
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1155)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1146)
+	... 6 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.228
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qeaGNxytisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.235
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.239
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.241
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.242
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qeaGNxyt => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.243
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.258
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.267
+!MESSAGE buffering callback sts4.classpath.qeaGNxyt PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.268
+!MESSAGE executing callback sts4.classpath.qeaGNxyt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:04:59.903
+!MESSAGE executing callback sts4.classpath.qeaGNxyt SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:31.327
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qeaGNxyt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:31.328
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.qeaGNxyt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:31.330
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:31.330
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qeaGNxyt => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:34.080
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:34.081
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@649b9234[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=884)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:34.082
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.588
+!MESSAGE Boot LS startup time from start to initialized: 7504ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.781
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tsEIKFUpisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.782
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.783
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.785
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.785
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.786
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tsEIKFUp => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.798
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.805
+!MESSAGE buffering callback sts4.classpath.tsEIKFUp PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:41.808
+!MESSAGE executing callback sts4.classpath.tsEIKFUp 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 15:05:42.465
+!MESSAGE executing callback sts4.classpath.tsEIKFUp SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-07-16 15:06:14.726
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY Activator 1 0 2021-07-16 15:07:02.219
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:07:02.942
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:07:31.553
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:07:32.294
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:08:01.108
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 15:08:01.773
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.ui 2 2 2021-07-16 15:08:20.801
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
