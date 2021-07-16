@@ -11,7 +11,7 @@ import com.revature.beans.*;
 public interface ApplicationHibernate  {
 
 
-	public List<Application> findByPet(Integer pid);
+	public List<Application> findByPet(Pet pet);
 	
 	public List<Application> findByCustomer(Customer customer);
 
