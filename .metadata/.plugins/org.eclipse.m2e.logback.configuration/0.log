@@ -1604,3 +1604,5 @@ java.io.FileNotFoundException: C:\Users\porte\OneDrive\Desktop\Revature\projects
 2021-07-16 15:08:01,472 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2021-07-16 15:08:01,531 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2021-07-16 15:08:01,536 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-07-16 15:08:01,536 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-07-16 15:08:01,536 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\User\Desktop\Project2\petAdoption\Back-End\PetAdoptionAgency\src\test\resources
