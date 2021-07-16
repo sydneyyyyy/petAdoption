@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Pet } from '../pet';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pet-detail',
@@ -12,18 +12,22 @@ import { Pet } from '../pet';
 export class PetDetailComponent implements OnInit {
 
   private apiServerUrl = environment.apiBaseUrl;
-
-  constructor(private http: HttpClient) { }
+  id: any;
+  pets: any;
+  
+  constructor(private http: HttpClient, private _Activatedroute: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.getPetById(id);
+    this.id=this._Activatedroute.snapshot.paramMap.get("id");
+    this.getPetById(this.id);
   }
 
-  // getPetById(id: number): Observable<Pet> {
-  //   return this.http.get<Pet>(`${this.apiServerUrl}/pets/${id}`).subscribe(response => {
-  //     console.log(response);
-  //   })
+  getPetById(id: number) {
+    return this.http.get<Pet>(`${this.apiServerUrl}/pets/${id}`).subscribe(response => {
+      console.log(response);
+      this.pets = response;
+    })
     
-  // }
+  }
 
 }
