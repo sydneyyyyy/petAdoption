@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.beans.*;
 
-
-public interface ApplicationHibernate  {
+@Repository
+public interface ApplicationHibernate  extends CrudRepository<Application, Integer>{
 
 
 	public List<Application> findByPet(Pet pet);
