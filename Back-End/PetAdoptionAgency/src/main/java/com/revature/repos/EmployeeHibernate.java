@@ -12,9 +12,11 @@ import com.revature.beans.Employee;
 import com.revature.beans.Pet;
 import com.revature.beans.Species;
 import com.revature.utils.HibernateUtil;
+
 //test
 @Repository
 public interface EmployeeHibernate extends CrudRepository<Employee, Integer> {
+
 
 
 	public Employee findByUsername(String un);
