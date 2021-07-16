@@ -73,6 +73,12 @@ public class ApplicationController {
 		return empAppList;
 	} 
 	
+	@GetMapping("/canAdopt/{pId}")
+	public boolean canAdopt(@PathVariable("pId") int pId) {
+		Pet p = ps.getPetById(pId);
+		return as.canAdopt(p);
+	}
+	
 	@GetMapping(value="customer/{cId}" , produces="application/json")
 	public List<Application> getCustApplications(@PathVariable("cId") int cId){
 		

@@ -113,6 +113,23 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		return ah.findByCustomer(c);
 	}
 
+	@Override
+	public boolean canAdopt(Pet p) {
+
+		List<Application> appList = ah.findByPet(p);
+		for(Application app : appList) {
+			if (app.getStatus().equals("denied")) {
+				appList.remove(app);
+			}
+		}
+		
+		if(appList.isEmpty()) {
+			return true;
+		}
+		
+		return false;
+	}
+
 	
 
 }

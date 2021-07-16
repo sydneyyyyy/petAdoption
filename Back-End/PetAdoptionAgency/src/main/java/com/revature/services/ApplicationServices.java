@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.revature.beans.Application;
 import com.revature.beans.Customer;
+import com.revature.beans.Pet;
 import com.revature.beans.Species;
 
 public interface ApplicationServices {
@@ -29,4 +30,6 @@ public List<Application> getAll();
 	public List<Application> getByStatus(String status);
 
 	public List<Application> getByCustomer(Integer cId);
+	
+	public boolean canAdopt(Pet p);
 }
