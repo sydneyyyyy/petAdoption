@@ -4,7 +4,7 @@
 
 	<Properties>
 
-		<Property name="basePath">..\Project2\petAdoption\Back-End\PetAdoptionAgency\src\main\resources</Property>
+		<Property name="basePath">../Desktop/Project2/petAdoption/Back-End/PetAdoptionAgency/src/main/resources</Property>
 
 	</Properties>
 

@@ -4069,3 +4069,123 @@ java.util.concurrent.TimeoutException
 
 !ENTRY Activator 1 0 2021-07-16 13:55:14.215
 !MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:59:37.165
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:59:37.829
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 13:59:38.179
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.jface 2 0 2021-07-16 14:07:51.318
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-07-16 14:07:51.318
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46d2c993,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fd1a6aa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY Activator 1 0 2021-07-16 14:09:31.777
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:29.953
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:30.361
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:45.564
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:11:45.735
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:28.439
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:30.583
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:47.830
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.209
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.220
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.237
+!MESSAGE buffering callback sts4.classpath.mjvFGaDO PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.238
+!MESSAGE executing callback sts4.classpath.mjvFGaDO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:50.879
+!MESSAGE executing callback sts4.classpath.mjvFGaDO SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-07-16 14:19:51.647
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.923
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY Activator 1 0 2021-07-16 14:19:54.925
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.933
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.940
+!MESSAGE buffering callback sts4.classpath.mjvFGaDO PetAdoptionAgency false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:54.941
+!MESSAGE executing callback sts4.classpath.mjvFGaDO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-16 14:19:55.378
+!MESSAGE executing callback sts4.classpath.mjvFGaDO SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-07-16 14:19:55.388
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:57.061
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:19:58.589
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:20:00.476
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:30:47.974
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:30:48.193
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:33:06.944
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:33:07.130
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:34:34.849
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-16 14:34:35.027
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
