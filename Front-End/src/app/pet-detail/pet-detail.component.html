@@ -1,2 +1,12 @@
 <p>pet-detail works!</p>
-<!-- <h2>{{pet.name}}</h2> -->
+<div *ngIf="pets">
+    <h3>{{pets.name}}</h3>
+    <img id="pet-img" src={{pets.image}}>
+    <p>Breed: {{pets.breed.bname}}</p>
+    <p>Age: {{pets.age}}</p>
+    <p>Gender: {{pets.gender}}</p>
+    <p>Price: ${{pets.price}}</p>
+    <p>Size: {{pets.size}}</p>
+    <p>Availability: {{pets.available ? 'Available for adoption' : 'Adoption pending'}}</p>
+</div>
+
