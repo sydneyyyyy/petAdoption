@@ -10,9 +10,11 @@ import { environment } from 'src/environments/environment';
 })
 export class PetsComponent implements OnInit {
 
+
   private apiServerUrl = environment.apiBaseUrl;
   pets: any;
   
+
   constructor(private http: HttpClient, private router: Router) { 
     
   }
@@ -32,6 +34,7 @@ export class PetsComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+
   }
 
 }
