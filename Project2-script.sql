@@ -7,6 +7,7 @@ select * from pet;
 select * from application;
 select * from employee;
 select * from status;
+select * from pet where gender='M';
 
 select * from pet
 where bid=1;
