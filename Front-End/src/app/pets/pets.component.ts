@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PetsComponent implements OnInit {
 
-  
+  private apiServerUrl = environment.apiBaseUrl;
   pets: any;
   
   constructor(private http: HttpClient, private router: Router) { 
@@ -18,10 +18,20 @@ export class PetsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAvailablePets();
   }
 
   petDetail() {
     this.router.navigate(['pets/{id}']);
+  }
+
+  getAvailablePets() {
+    return this.http.get(`${this.apiServerUrl}/pets/available/true`).subscribe(response => {
+      console.log(response);
+      this.pets = response;
+    }, error => {
+      console.log(error);
+    });
   }
 
 }

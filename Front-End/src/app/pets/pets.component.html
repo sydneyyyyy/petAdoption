@@ -1,10 +1,13 @@
 
 <app-pet-search></app-pet-search>
 
-<div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
+<div id="pet-container">
+  <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
     <img src={{pet.image}} class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{pet.name}}</h5>
       <p class="card-text">{{pet.breed.bname}}</p>
     </div>
   </div>
+</div>
+
