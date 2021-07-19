@@ -1,4 +1,5 @@
 <p>pets works!</p>
+
 <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
     <img src={{pet.image}} class="card-img-top" alt="...">
     <div class="card-body">
