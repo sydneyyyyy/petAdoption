@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'customers/login', component: LoginComponent },
   { path: 'pets', component: PetsComponent },
   { path: 'customers/addCustomer', component: RegisterComponent },
-  { path: '', component: HomeComponent },
-{ path: "pets/:id", component: PetDetailComponent }
+  { path: 'home', component: HomeComponent },
+  { path: "pets/:id", component: PetDetailComponent }
 ]
 
 @NgModule({

@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { AuthService } from '../auth.service';
 import { Customer } from '../customer';
 import { Employee } from '../employee';
 
@@ -18,8 +19,10 @@ export class LoginComponent implements OnInit {
   private apiServerUrl = environment.apiBaseUrl;
   customers: any;
   employees: any;
+  loginStatus$: Observable<boolean>;
   
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, 
+    private authService: AuthService) {
     this.loginForm = new FormGroup({
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
@@ -33,6 +36,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.getCustomers();
+    this.loginStatus$ = this.authService.isLoggedIn;
   }
 
   getCustomers() {
@@ -45,21 +49,23 @@ export class LoginComponent implements OnInit {
   }
 
   public login(customer: Customer): Observable<Customer> {
-    let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/login`, customer).subscribe(response => {
-      console.log(response);      
-      let res = JSON.stringify(response);
-      localStorage.setItem('currentUser', res);
-      //window.location.reload();
-      if(response != null){
-        this.router.navigate(['pets']);
-        console.log("test");
-        return this.customers;
-      }
-      else{
-        this.loginEmp(this.loginForm.value);
+    this.authService.login(customer);
+    // let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/login`, customer).subscribe(response => {
+    //   console.log(response);      
+    //   let res = JSON.stringify(response);
+    //   localStorage.setItem('currentUser', res);
+    //   this.loggedIn.next(true);
+    //   //window.location.reload();
+    //   if(response != null){
+    //     this.router.navigate(['pets']);
+    //     console.log("test");
+    //     return this.customers;
+    //   }
+    //   else{
+    //     this.loginEmp(this.loginForm.value);
         
-      }
-    });
+    //   }
+    // });
     
     return null;
   }
