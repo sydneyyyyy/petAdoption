@@ -25,6 +25,8 @@ public class Application {
 	
 	private String status;
 	
+	private String information;
+	
 	@OneToOne
 	@JoinColumn(name="pid")
 	private Pet pet;
@@ -38,7 +40,7 @@ public class Application {
 	
 
 	public Application(int id, Date subdate, Boolean bsupapproval, Boolean secondapproval, String status, Pet pet,
-			Customer customer) {
+			Customer customer, String information) {
 		super();
 		this.id = id;
 		this.subdate = subdate;
@@ -47,6 +49,7 @@ public class Application {
 		this.status = status;
 		this.pet = pet;
 		this.customer = customer;
+		this.information = information;
 	}
 
 
@@ -107,6 +110,14 @@ public class Application {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+	
+	public String getInformation() {
+		return information;
+	}
+
+	public void setInformation(String information) {
+		this.information = information;
+	}
 
 
 
@@ -121,6 +132,7 @@ public class Application {
 		result = prime * result + ((secondapproval == null) ? 0 : secondapproval.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((subdate == null) ? 0 : subdate.hashCode());
+		result = prime * result + ((information == null) ? 0 : information.hashCode());
 		return result;
 	}
 
@@ -167,6 +179,11 @@ public class Application {
 				return false;
 		} else if (!subdate.equals(other.subdate))
 			return false;
+		if (information == null) {
+			if (other.information != null)
+				return false;
+		} else if (!information.equals(other.information))
+			return false;
 		return true;
 	}
 
@@ -175,7 +192,8 @@ public class Application {
 	@Override
 	public String toString() {
 		return "Application [id=" + id + ", subdate=" + subdate + ", bsupapproval=" + bsupapproval + ", secondapproval="
-				+ secondapproval + ", status=" + status + ", pet=" + pet + ", customer=" + customer + "]";
+				+ secondapproval + ", status=" + status + ", pet=" + pet + ", customer=" + customer + 
+				", information=" + information + "]";
 	}
 
 	
