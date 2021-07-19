@@ -13,6 +13,9 @@ import { PetDetailComponent } from './pet-detail/pet-detail.component';
 import { AdoptFormComponent } from './adopt-form/adopt-form.component';
 import { CustomerComponent } from './customer/customer.component';
 import { PetSearchComponent } from './pet-search/pet-search.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DogsComponent } from './dogs/dogs.component';
+import { SpeciesComponent } from './species/species.component';
 
 
 
@@ -28,6 +31,8 @@ import { PetSearchComponent } from './pet-search/pet-search.component';
     AdoptFormComponent,
     CustomerComponent,
     PetSearchComponent,
+    DogsComponent,
+    SpeciesComponent,
 
   ],
   imports: [
@@ -35,7 +40,8 @@ import { PetSearchComponent } from './pet-search/pet-search.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
