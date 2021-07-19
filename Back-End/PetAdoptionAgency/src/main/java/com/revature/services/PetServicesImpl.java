@@ -11,7 +11,6 @@ import com.revature.beans.Breed;
 import com.revature.beans.Pet;
 import com.revature.beans.Species;
 import com.revature.repos.BreedHibernate;
-import com.revature.repos.PetHibernate;
 import com.revature.repos.PetRepo;
 import com.revature.repos.SpeciesHibernate;
 
@@ -77,6 +76,19 @@ public class PetServicesImpl implements PetServices{
 				pets.addAll(p);
 			}
 		}
+		
+		return pets;
+	}
+	
+	@Override
+	public List<Pet> getByGender(String gender){
+		
+		List<Pet> pets = new ArrayList();
+		pets = pr.findByGender(gender);
+		
+		
+			
+		
 		
 		return pets;
 	}

@@ -14,4 +14,6 @@ public interface PetRepo extends CrudRepository<Pet, Integer>{
 	public List<Pet> findByBreed(Breed breed);
 	
 	public List<Pet> findByAvailable(Boolean avail);
+	
+	public List<Pet> findByGender(String gender);
 }
