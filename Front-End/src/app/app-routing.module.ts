@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: "pets/:id", component: PetDetailComponent },
   { path: "applications", component: AdoptFormComponent},
   { path: 'home', component: HomeComponent },
+  { path: '**', component: HomeComponent },
+
   // { path: 'pets/species/:id', component: SpeciesComponent }
 ]
 

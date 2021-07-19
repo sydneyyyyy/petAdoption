@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Pet } from '../pet';
-import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -18,6 +15,7 @@ export class PetSearchComponent {
 
   species: any;
   pets: any;
+  breeds: any;
   private apiServerUrl = environment.apiBaseUrl;
   id: any;
 
@@ -27,12 +25,24 @@ export class PetSearchComponent {
 
   ngOnInit() {
     this.id=this._Activatedroute.snapshot.paramMap.get("id");
-    this.showResults(this.id);
+    this.showSpeciesResults(this.id);
     this.getSpecies();
+    this.getBreeds();
   }
 
-  showResults(id: number) {
+  showSpeciesResults(id: number) {
     this.getBySpecies(id);
+  }
+
+  showBreedResults(id: number) {
+    this.getByBreed(id);
+  }
+
+  getBreeds() {
+    return this.http.get(`${this.apiServerUrl}/breeds`).subscribe(response => {
+      console.log(response);
+      this.breeds = response;
+    })
   }
 
   getSpecies() {
@@ -48,6 +58,18 @@ export class PetSearchComponent {
       this.pets = response;
       let petsDiv = document.getElementById('pet-container');
       petsDiv.setAttribute('style', 'display: none;');
+      let breedDiv = document.getElementById('breed-dropdown');
+      breedDiv.setAttribute('style', 'display: contents'); 
+    })
+  }
+
+  getByBreed(id: number) {
+    return this.http.get(`${this.apiServerUrl}/pets/breed/${id}`).subscribe(response => {
+      console.log(response);
+      this.pets = response;
+      let petsDiv = document.getElementById('pet-container');
+      petsDiv.setAttribute('style', 'display: none;');
+
     })
   }
 
