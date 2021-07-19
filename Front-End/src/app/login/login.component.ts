@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Customer } from '../customer';
+import { Employee } from '../employee';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   private apiServerUrl = environment.apiBaseUrl;
   customers: any;
+  employees: any;
   
   constructor(private http: HttpClient, private router: Router) {
     this.loginForm = new FormGroup({
@@ -44,15 +46,42 @@ export class LoginComponent implements OnInit {
 
   public login(customer: Customer): Observable<Customer> {
     let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/login`, customer).subscribe(response => {
-      console.log(response);
+      console.log(response);      
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
-      window.location.reload();
+      //window.location.reload();
+      if(response != null){
+        this.router.navigate(['pets']);
+        console.log("test");
+        return this.customers;
+      }
+      else{
+        this.loginEmp(this.loginForm.value);
+        
+      }
     });
-    this.router.navigate(['pets']);
-    return this.customers;
+    
+    return null;
   }
 
+  public loginEmp(employee: Employee): Observable<Employee> {
+    let emp = this.http.post<Employee>(`${this.apiServerUrl}/employees/login`, employee).subscribe(response => {
+      console.log(response);      
+      let res = JSON.stringify(response);
+      localStorage.setItem('currentUser', res);
+     // window.location.reload();
+     if(response != null){
+      
+      this.router.navigate(['pets']);
+      return this.employees;
+    }
+    
+    });
+    
+    return null;
+    
+    
+  }
   
 
   
