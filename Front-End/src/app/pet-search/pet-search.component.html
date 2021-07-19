@@ -1,22 +1,22 @@
 <div class="search-container">
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Species
-    </button>
-    <select class="dropdown-menu" aria-labelledby="dropdownMenu2" [routerLink]="['/species', species.id]">
-      <option class="dropdown-item" *ngFor="let species of species" [value]="species">{{species}}</option>
-    </select>
-  </div>
-  
-  <!-- <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Gender
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      <button class="dropdown-item" type="button">Female</button>
-      <button class="dropdown-item" type="button">Male</button>
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Species</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem *ngFor="let spec of species; let i = index" 
+                [value]="species[i].id"
+                (click)="showResults(species[i].id)">
+          {{species[i].sName}}</button>
+      </div>
     </div>
-  </div> -->
+  </div>
+  <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
+    <img src={{pet.image}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{pet.name}}</h5>
+      <p class="card-text">{{pet.breed.bname}}</p>
+    </div>
+  </div>
 </div>
 
 
