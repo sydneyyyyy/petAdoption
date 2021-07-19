@@ -22,7 +22,7 @@ public class Customer {
 	
 	private String password;
 	
-	private String information;
+	
 	
 	public Customer() {}
 	
@@ -40,14 +40,14 @@ public class Customer {
 		this.password = password;
 	}
 
-	public Customer(int id, String fname, String lname, String username, String password, String information) {
+	public Customer(int id, String fname, String lname, String username, String password) {
 		super();
 		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
 		this.username = username;
 		this.password = password;
-		this.information = information;
+		
 	}
 
 	public int getId() {
@@ -90,13 +90,7 @@ public class Customer {
 		this.password = password;
 	}
 
-	public String getInformation() {
-		return information;
-	}
 
-	public void setInformation(String information) {
-		this.information = information;
-	}
 
 	@Override
 	public int hashCode() {
@@ -104,7 +98,7 @@ public class Customer {
 		int result = 1;
 		result = prime * result + ((fname == null) ? 0 : fname.hashCode());
 		result = prime * result + id;
-		result = prime * result + ((information == null) ? 0 : information.hashCode());
+		
 		result = prime * result + ((lname == null) ? 0 : lname.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
@@ -127,11 +121,6 @@ public class Customer {
 			return false;
 		if (id != other.id)
 			return false;
-		if (information == null) {
-			if (other.information != null)
-				return false;
-		} else if (!information.equals(other.information))
-			return false;
 		if (lname == null) {
 			if (other.lname != null)
 				return false;
@@ -153,7 +142,7 @@ public class Customer {
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", fname=" + fname + ", lname=" + lname + ", username=" + username + ", password="
-				+ password + ", information=" + information + "]";
+				+ password + "]";
 	}
 	
 }

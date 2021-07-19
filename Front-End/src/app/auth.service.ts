@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
@@ -29,4 +30,24 @@ export class AuthService {
       localStorage.setItem('currentUser', res);
       this.loggedIn.next(true);
       if(response != null){
-        this.router
+        this.router.navigate(['pets']);
+        console.log("test");
+        return this.customers;
+      }
+      // else{
+      //   this.loginEmp(this.loginForm.value);
+        
+      // }
+    });
+    
+    return null;
+  }
+  
+  logout() {
+    this.loggedIn.next(false);
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['customers/login']);
+    console.log("Logout successful");
+  }
+
+}

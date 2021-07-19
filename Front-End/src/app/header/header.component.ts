@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -22,5 +22,6 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     this.authService.logout();
+
   }
 }
