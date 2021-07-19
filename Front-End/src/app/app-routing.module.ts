@@ -8,14 +8,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PetsComponent } from './pets/pets.component';
 import { PetDetailComponent } from './pet-detail/pet-detail.component';
+import { AdoptFormComponent } from './adopt-form/adopt-form.component';
 
 const routes: Routes = [
   { path: 'customers/login', component: LoginComponent },
   { path: 'pets', component: PetsComponent },
   { path: 'customers/addCustomer', component: RegisterComponent },
-  { path: 'home', component: HomeComponent },
-  { path: "pets/:id", component: PetDetailComponent }
-
+  { path: "pets/:id", component: PetDetailComponent },
+  { path: "applications", component: AdoptFormComponent},
+  { path: 'home', component: HomeComponent }
 ]
 
 @NgModule({

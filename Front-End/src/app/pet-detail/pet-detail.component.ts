@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Pet } from '../pet';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pet-detail',
@@ -16,7 +17,7 @@ export class PetDetailComponent implements OnInit {
   pets: any;
   canAdopt: any;
   
-  constructor(private http: HttpClient, private _Activatedroute: ActivatedRoute) { }
+  constructor(private http: HttpClient, private _Activatedroute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.id=this._Activatedroute.snapshot.paramMap.get("id");
@@ -29,7 +30,10 @@ export class PetDetailComponent implements OnInit {
       console.log(response);      
       this.pets = response;
     })
-    
+  }
+
+  adoptPet(){
+    this.router.navigate(["applications"]);
   }
 
   getCanAdopt(id: number){
