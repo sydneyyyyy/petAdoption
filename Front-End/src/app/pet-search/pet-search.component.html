@@ -1,22 +1,22 @@
-<div id="search-component">
-    <label for="search-box">Search by Species </label>
-    <select class="form-control" id="species" name="species">
-        <option *ngFor="let specie of species" [value]="specie">{{specie}}</option>
+<div class="search-container">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Species
+    </button>
+    <select class="dropdown-menu" aria-labelledby="dropdownMenu2" [routerLink]="['/species', species.id]">
+      <option class="dropdown-item" *ngFor="let species of species" [value]="species">{{species}}</option>
     </select>
-  
-    <ul class="search-result">
-      <li *ngFor="let pet of pets | async" >
-        <a routerLink="/pets/species/{{species.id}}">
-
-        </a>
-      </li>
-    </ul>
   </div>
+  
+  <!-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Gender
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Female</button>
+      <button class="dropdown-item" type="button">Male</button>
+    </div>
+  </div> -->
+</div>
 
 
-  <!-- <select class="form-control" id="power"
-                  required
-                  [(ngModel)]="model.power" name="power"
-                  #power="ngModel">
-            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-          </select> -->

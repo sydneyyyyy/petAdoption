@@ -10,25 +10,14 @@ import { environment } from 'src/environments/environment';
 })
 export class PetsComponent implements OnInit {
 
-  private apiServerUrl =  environment.apiBaseUrl;
-  pets: any;
   
+  pets: any;
   
   constructor(private http: HttpClient, private router: Router) { 
     
   }
 
   ngOnInit() {
-    this.getPets();
-  }
-
-  getPets() {
-    return this.http.get(`${this.apiServerUrl}/pets`).subscribe(response => {
-      console.log(response);
-      this.pets = response;
-    }, error => {
-      console.log(error);
-    });
   }
 
   petDetail() {
