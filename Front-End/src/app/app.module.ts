@@ -10,6 +10,11 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { PetDetailComponent } from './pet-detail/pet-detail.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { AdoptFormComponent } from './adopt-form/adopt-form.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerService } from './customer.service';
+import { PetSearchComponent } from './pet-search/pet-search.component';
 
 
 
@@ -22,6 +27,10 @@ import { PetDetailComponent } from './pet-detail/pet-detail.component';
     HomeComponent,
     RegisterComponent,
     PetDetailComponent,
+    // EmployeeComponent,
+    AdoptFormComponent,
+    CustomerComponent,
+    PetSearchComponent,
 
   ],
   imports: [

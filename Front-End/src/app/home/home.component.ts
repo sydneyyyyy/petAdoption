@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
     return this.http.get(`${this.apiServerUrl}/pets/available/false`).subscribe(response => {
       console.log(response);
       this.pets = response;
+  
     })
   }
 

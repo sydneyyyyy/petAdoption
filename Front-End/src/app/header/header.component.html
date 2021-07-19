@@ -5,13 +5,22 @@
         <ul class="navbar-nav" *ngIf="!isLoggedIn">
           <li class="nav-item">
             <a class="nav-link" 
+                [routerLink]="['/pets']" routerLinkActive="active">Pets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
                 [routerLink]="['customers/login']" routerLinkActive="active">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['customers/addCustomer']" routerLinkActive="active">Register</a>
           </li>
         </ul>
+        
         <ul class="navbar-nav" *ngIf="isLoggedIn">
+          <li class="nav-item">
+            <a class="nav-link" 
+                [routerLink]="['/pets']" routerLinkActive="active">Pets</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">Logout</a>
           </li>

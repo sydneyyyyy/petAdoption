@@ -1,4 +1,3 @@
-<p>pet-detail works!</p>
 <div *ngIf="pets">
     <h3>{{pets.name}}</h3>
     <img id="pet-img" src={{pets.image}}>
@@ -9,4 +8,6 @@
     <p>Size: {{pets.size}}</p>
     <p>Availability: {{pets.available ? 'Available for adoption' : 'Adoption pending'}}</p>
 </div>
+
+<button (click)="adoptPet()">Adopt</button>
 
