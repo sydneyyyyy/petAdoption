@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -74,7 +75,5 @@ export class AuthService {
     this.router.navigate(['customers/login']);
     console.log("Logout successful");
   }
-  
 
-  
 }
