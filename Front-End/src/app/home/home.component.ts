@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Pet } from '../pet';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
