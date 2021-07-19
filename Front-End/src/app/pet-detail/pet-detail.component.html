@@ -7,6 +7,7 @@
     <p>Gender: {{pets.gender}}</p>
     <p>Price: ${{pets.price}}</p>
     <p>Size: {{pets.size}}</p>
-    <p>Availability: {{pets.available ? 'Available for adoption' : 'Adoption pending'}}</p>
+    <p>Availability: {{canAdopt ? 'Available for adoption' : 'Adoption pending'}}</p>
 </div>
+<button *ngIf="canAdopt" >Apply to Adopt</button>
 
