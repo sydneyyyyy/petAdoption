@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn$: Observable<boolean>;
 
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
@@ -22,5 +23,6 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     this.authService.logout();
+
   }
 }

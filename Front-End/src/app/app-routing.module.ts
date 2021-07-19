@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'customers/addCustomer', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
   { path: "pets/:id", component: PetDetailComponent }
+
 ]
 
 @NgModule({
