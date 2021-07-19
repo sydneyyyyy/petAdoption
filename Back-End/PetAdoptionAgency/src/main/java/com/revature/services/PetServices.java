@@ -24,4 +24,6 @@ public interface PetServices {
 	public List<Pet> getBySpecies(Integer sId);
 	
 	public List<Pet> getByAvailable(Boolean avail);
+	
+	public List<Pet> getByGender(String gender);
 }

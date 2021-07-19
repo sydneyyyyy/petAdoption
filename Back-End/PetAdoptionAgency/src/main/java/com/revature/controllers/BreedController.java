@@ -1,5 +1,6 @@
 package com.revature.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.*;
@@ -31,11 +32,13 @@ public class BreedController {
 	
 	private BreedServicesImpl bs;
 	private SpeciesServicesImpl ss;
+	private PetServicesImpl ps;
 	//public Gson gson = new Gson();
 	@Autowired
-	public BreedController(BreedServicesImpl bServ, SpeciesServicesImpl ss) {
+	public BreedController(BreedServicesImpl bServ, SpeciesServicesImpl ss, PetServicesImpl ps) {
 		this.bs = bServ;
 		this.ss = ss;
+		this.ps = ps;
 	}
 	
 	//@GetMapping()
@@ -62,6 +65,22 @@ public class BreedController {
 		Species s = ss.getPetById(id);
 		List<Breed> breeds = bs.getBySpecies(s);
 		return breeds;
+	}
+	
+	@GetMapping("/{bId}/gender/{gender}")
+	public List<Pet> getbyGender(@PathVariable("bId") int bId, @PathVariable("gender") String gender){
+		Breed b = bs.getBreedById(bId);
+		List<Pet> pets = ps.getByGender(gender);
+		List<Pet> fPets = new ArrayList();
+		for (Pet p : pets) {
+			if (p.getBreed() == b) {
+				//pets.remove(p);
+				
+				fPets.add(p);
+			}
+		}
+		
+		return fPets;
 	}
 	
 	@PostMapping(path="/addBreed", consumes = "application/json", produces="application/json")
