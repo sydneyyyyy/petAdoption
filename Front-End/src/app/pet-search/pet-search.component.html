@@ -1,0 +1,22 @@
+<div id="search-component">
+    <label for="search-box">Search by Species </label>
+    <select class="form-control" id="species" name="species">
+        <option *ngFor="let specie of species" [value]="specie">{{specie}}</option>
+    </select>
+  
+    <ul class="search-result">
+      <li *ngFor="let pet of pets | async" >
+        <a routerLink="/pets/species/{{species.id}}">
+
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- <select class="form-control" id="power"
+                  required
+                  [(ngModel)]="model.power" name="power"
+                  #power="ngModel">
+            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+          </select> -->
