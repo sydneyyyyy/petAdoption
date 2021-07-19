@@ -66,6 +66,8 @@ alter table breed add column sid int references species(id);
 
 alter table pet drop column sid;
 
+ALTER table customer drop column information;
+alter table application add column information varchar;
 alter table application drop column status;
 alter table application drop column bsupapproval;
 alter table application drop column secondapproval;

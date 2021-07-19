@@ -4993,3 +4993,18 @@ java.util.concurrent.TimeoutException
 
 !ENTRY Activator 1 0 2021-07-19 11:04:30.680
 !MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY org.eclipse.ui 2 2 2021-07-19 11:50:09.562
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY Activator 1 0 2021-07-19 11:51:30.206
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-19 11:51:39.210
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-19 11:52:04.310
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
+
+!ENTRY Activator 1 0 2021-07-19 13:10:08.403
+!MESSAGE Has main method computation for project 'PetAdoptionAgency'
