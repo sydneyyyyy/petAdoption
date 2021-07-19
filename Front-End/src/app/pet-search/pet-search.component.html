@@ -1,0 +1,22 @@
+<div class="search-container">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Species
+    </button>
+    <select class="dropdown-menu" aria-labelledby="dropdownMenu2" [routerLink]="['/species', species.id]">
+      <option class="dropdown-item" *ngFor="let species of species" [value]="species">{{species}}</option>
+    </select>
+  </div>
+  
+  <!-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Gender
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Female</button>
+      <button class="dropdown-item" type="button">Male</button>
+    </div>
+  </div> -->
+</div>
+
+

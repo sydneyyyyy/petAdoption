@@ -50,45 +50,14 @@ export class LoginComponent implements OnInit {
 
   public login(customer: Customer): Observable<Customer> {
     this.authService.login(customer);
-    // let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/login`, customer).subscribe(response => {
-    //   console.log(response);      
-    //   let res = JSON.stringify(response);
-    //   localStorage.setItem('currentUser', res);
-    //   this.loggedIn.next(true);
-    //   //window.location.reload();
-    //   if(response != null){
-    //     this.router.navigate(['pets']);
-    //     console.log("test");
-    //     return this.customers;
-    //   }
-    //   else{
-    //     this.loginEmp(this.loginForm.value);
-        
-    //   }
-    // });
-    
     return null;
   }
 
   public loginEmp(employee: Employee): Observable<Employee> {
-    let emp = this.http.post<Employee>(`${this.apiServerUrl}/employees/login`, employee).subscribe(response => {
-      console.log(response);      
-      let res = JSON.stringify(response);
-      localStorage.setItem('currentUser', res);
-     // window.location.reload();
-     if(response != null){
-      
-      this.router.navigate(['pets']);
-      return this.employees;
-    }
-    
-    });
-    
+    this.authService.loginEmp(employee);
     return null;
-    
-    
   }
-  
 
   
 }
+

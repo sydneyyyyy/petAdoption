@@ -1,4 +1,3 @@
-<p>pet-detail works!</p>
 <div *ngIf="pets">
     <h3>{{pets.name}}</h3>
     <img id="pet-img" src={{pets.image}}>
@@ -10,4 +9,6 @@
     <p>Availability: {{canAdopt ? 'Available for adoption' : 'Adoption pending'}}</p>
 </div>
 <button *ngIf="canAdopt" >Apply to Adopt</button>
+
+<button (click)="adoptPet()">Adopt</button>
 
