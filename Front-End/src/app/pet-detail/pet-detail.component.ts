@@ -27,8 +27,9 @@ export class PetDetailComponent implements OnInit {
 
   getPetById(id: number) {
     return this.http.get<Pet>(`${this.apiServerUrl}/pets/${id}`).subscribe(response => {
-      console.log(response);      
+
       this.pets = response;
+      localStorage["selectedPet"]=JSON.stringify(this.pets);
     })
   }
 
