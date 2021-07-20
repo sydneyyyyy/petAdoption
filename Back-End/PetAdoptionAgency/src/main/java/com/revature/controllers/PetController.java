@@ -1,5 +1,6 @@
 package com.revature.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.*;
@@ -65,13 +66,25 @@ public class PetController {
 	@GetMapping("/breed/{bId}")
 	public List<Pet> getByBreed(@PathVariable("bId") Integer bId){
 		List<Pet> pets = ps.getByBreed(bId);
-		return pets;
+		List<Pet> avPets = new ArrayList();
+		for (Pet p : pets) {
+			if(p.isAvailable()) {
+				avPets.add(p);
+			}
+		}
+		return avPets;
 	}
 	
 	@GetMapping("/species/{sId}")
 	public List<Pet> getbySpecies(@PathVariable("sId") Integer sId){
 		List<Pet> pets = ps.getBySpecies(sId);
-		return pets;
+		List<Pet> avPets = new ArrayList();
+		for (Pet p : pets) {
+			if(p.isAvailable()) {
+				avPets.add(p);
+			}
+		}
+		return avPets;
 	}
 	
 
