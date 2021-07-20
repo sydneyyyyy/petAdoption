@@ -1,0 +1,44 @@
+<app-emp-header></app-emp-header>
+<h4>Enter the following to add a pet:</h4>
+<div class="col-md-6 offset-md-3 mt-4" id="form-container">
+    <form #addPet="ngForm" [formGroup]="addPetForm"  class="add-pet-container">
+        <div class="form-group">
+            <label for="add-pet-name">Name:</label>
+            <input ngModel name="name" type="text" class="form-control" id="add-pet-name" formControlName="name" required>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Species</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+              <button ngbDropdownItem *ngFor="let spec of species; let i = index" [value]="species[i].id">
+                {{species[i].sName}}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Breed</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="force-scroll">
+              <button ngbDropdownItem *ngFor="let breed of breeds; let i = index" [value]="breeds[i].id">
+                {{breeds[i].bname}}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Gender</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem [value]="F">Female</button>
+              <button ngbDropdownItem [value]="M">Male</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="add-pet-age">Age:</label>
+            <input ngModel name="age" type="text" class="form-control" id="add-pet-name" formControlName="name" required>
+        </div>
+        <div class="form-group">
+            <label for="add-pet-price">Price:</label>
+            <input ngModel name="price" type="text" class="form-control" id="add-pet-name" formControlName="name" required>
+        </div>
+        <div class="form-group">
+            <label for="add-pet-image">Image URL:</label>
+            <input ngModel name="image" type="text" class="form-control" id="add-pet-name" formControlName="name" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Pet</button>
+    </form>
+</div>

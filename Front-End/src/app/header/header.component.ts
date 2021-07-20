@@ -11,16 +11,17 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   isLoggedIn$: Observable<boolean>;
+  
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
     this.loginStatus$ = this.authService.isLoggedIn;
-    this.isEmployee = localStorage.getItem('isEmployee');
+    
   }
 
   loginStatus$: Observable<boolean>;
-  isEmployee: string;
+  
 
   onLogout() {
     this.authService.logout();
