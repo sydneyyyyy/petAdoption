@@ -68,8 +68,13 @@ public class ApplicationController {
 		
 		//Need to filter out second approval for the employee's own species
 		for (Application app : a){
+<<<<<<< HEAD
 			// if ((app.getStatus().equals("submitted"))) {empAppList.add(app);}
 			if ((app.getStatus().equals("secondApproval"))&&(app.getPet().getBreed().getSpecies() != emp.getSpecies())) {
+=======
+			//if ((app.getStatus().equals("submitted"))) {empAppList.add(app);}
+			 if ((app.getStatus().equals("secondApproval"))&&(app.getPet().getBreed().getSpecies() != emp.getSpecies())) {
+>>>>>>> 9c067a39b8c5d8ece74d92123d9462fc3f54e0c8
 				empAppList.add(app);
 			}
 		}
