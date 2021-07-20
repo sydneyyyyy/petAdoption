@@ -110,7 +110,14 @@ public class ApplicationController {
 	@ResponseStatus(value=HttpStatus.OK)
 	public Application updateApplication(@PathVariable("id") int id, @RequestBody Application app) {
 		if (id == app.getId()) {
+			if (app.getStatus().equals("approved")) {
+				Pet p = app.getPet();
+				p.setAvailable(false);
+				System.out.println(p);
+				ps.updatePet(p);
+			}
 			return as.updateApplication(app);
+			
 		}
 		if (app.getStatus().equals("submitted")) {
 			return as.updateApplication(app);
@@ -125,6 +132,13 @@ public class ApplicationController {
 			System.out.println(p.isAvailable());
 			ps.updatePet(p);
 
+			return as.updateApplication(app);
+		}else if (app.getStatus().equals("approved")) {
+			Pet p = app.getPet();
+			p.setAvailable(false);
+			System.out.println(p);
+			ps.updatePet(p);
+			
 			return as.updateApplication(app);
 		}
 		return null;
