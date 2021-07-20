@@ -31,6 +31,24 @@ export class ApplicationsComponent implements OnInit {
     })
   }
 
+  requestInfo(aid: number) {
+    console.log("request clicked...");
+    const body = {
+      id: aid,
+      subdate: this.application.subdate,
+      bsupapproval: this.application.bsupapproval,
+      secondapproval: this.application.secondApproval,
+      status: "more info requested",
+      information: this.application.information,
+      pet: this.application.pet,
+      customer: this.application.customer,
+    }
+    return this.http.put<Application>(`${this.apiServerUrl}/applications/${aid}`, body).subscribe(response => {
+      console.log(response);
+      this.application = response;
+    })
+  }
+
   approveApp(aid: number) {
     let emp = JSON.parse(localStorage.getItem('currentUser'));
     let app = this.http.get(`${this.apiServerUrl}/applications/${aid}`).subscribe(response => {
