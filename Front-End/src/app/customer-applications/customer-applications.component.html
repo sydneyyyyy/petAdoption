@@ -8,8 +8,9 @@
       <th>Second Approval</th>
       <th>Status</th>
       <th>Information</th>
+      <th>Input Information</th>
     </tr>
-    <tr *ngFor="let app of applicationList; let i = index">
+    <tr *ngFor="let app of apps; let i = index">
       <td>{{app.customer.fname}} {{app.customer.lname}}</td>
       <td>{{app.pet.name}}</td>
       <td>{{app.pet.breed.bname}}</td>
@@ -17,5 +18,9 @@
       <td>{{app.secondapproval}}</td>
       <td>{{app.status}}</td>
       <td>{{app.information}}</td>
+      <td *ngIf="app.infoRequested" type="text" >
+        <textarea type="text" id="moreInfo" name="moreInfo" [(ngModel)]="moreInfo"></textarea>
+        <button class="btn btn-primary" type="submit" [value]="app.id" (click)="onSubmit(app.id)">Submit</button>
+      </td>
     </tr>
 </table>
