@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.loginStatus$ = this.authService.isLoggedIn;
     this.isEmployee = localStorage.getItem('isEmployee');
+    
   }
 
   loginStatus$: Observable<boolean>;

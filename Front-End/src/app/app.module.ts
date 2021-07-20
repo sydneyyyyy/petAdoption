@@ -18,6 +18,7 @@ import { DogsComponent } from './dogs/dogs.component';
 import { SpeciesComponent } from './species/species.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ApplicationsComponent } from './applications/applications.component';
+import { AddPetComponent } from './add-pet/add-pet.component';
 
 
 
@@ -36,7 +37,8 @@ import { ApplicationsComponent } from './applications/applications.component';
     DogsComponent,
     SpeciesComponent,
     EmployeeComponent,
-    ApplicationsComponent
+    ApplicationsComponent,
+    AddPetComponent
 
   ],
   imports: [

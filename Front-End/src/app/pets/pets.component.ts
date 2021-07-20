@@ -16,6 +16,7 @@ export class PetsComponent implements OnInit {
 
   private apiServerUrl = environment.apiBaseUrl;
   pets: any;
+  isEmployee: any;
   
 
   constructor(private http: HttpClient, private router: Router, private petService: PetService) { 
@@ -24,6 +25,8 @@ export class PetsComponent implements OnInit {
 
   ngOnInit() {
     this.getAvailablePets();
+    this.isEmployee = localStorage.getItem('isEmployee');
+
   }
 
   petDetail() {

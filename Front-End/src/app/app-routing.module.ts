@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'employees/login', component: EmployeeComponent},
   { path: 'applications/employee', component: ApplicationsComponent },
   { path: '**', component: HomeComponent },
+
   
   // { path: 'pets/species/:id', component: SpeciesComponent }
 ]
