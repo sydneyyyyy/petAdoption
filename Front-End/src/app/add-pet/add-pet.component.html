@@ -6,18 +6,16 @@
             <label for="add-pet-name">Name:</label>
             <input ngModel name="name" type="text" class="form-control" id="add-pet-name" formControlName="name" required>
         </div>
-        <!-- <form #species="ngForm" [formGroup]="speciesForm">
-            <div class="form-group">
-                <select formControlName="species" class="form-control">
-                    <option>Species</option>
-                    <option *ngFor="let spec of species">{{spec.sName}}</option>
-                </select> 
-            </div>
-        </form> -->
         <div class="form-group">
-            <select formControlName="breeds" class="form-control">
+            <select formControlName="species" class="form-control">
+                <option>Species</option>
+                <option *ngFor="let spec of species">{{spec.sName}}</option>
+            </select> 
+        </div>
+        <div class="form-group">
+            <select formControlName="bname" class="form-control">
                 <option>Breeds</option>
-                <option *ngFor="let breed of breeds">{{breed.bname}}</option>
+                <option *ngFor="let breed of bname">{{breed.bname}}</option>
             </select> 
         </div>
         <div class="form-group">
