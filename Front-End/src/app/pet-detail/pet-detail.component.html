@@ -10,6 +10,7 @@
 </div>
 <!-- <button *ngIf="canAdopt" >Apply to Adopt</button> -->
 
-<button (click)="adoptPet()">Apply to Adopt</button>
+<button *ngIf="canAdopt" (click)="adoptPet()">Apply to Adopt</button>
+<button *ngIf="isEmployee" (click)="deletePet()">Delete</button>
 
 

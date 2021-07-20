@@ -16,6 +16,7 @@ export class PetDetailComponent implements OnInit {
   id: any;
   pets: any;
   canAdopt: any;
+  isEmployee: any;
   
   constructor(private http: HttpClient, private _Activatedroute: ActivatedRoute, private router: Router) { }
 
@@ -23,6 +24,7 @@ export class PetDetailComponent implements OnInit {
     this.id=this._Activatedroute.snapshot.paramMap.get("id");
     this.getCanAdopt(this.id);
     this.getPetById(this.id);
+    this.isEmployee = localStorage.getItem['isEmployee'];
   }
 
   getPetById(id: number) {
@@ -42,6 +44,11 @@ export class PetDetailComponent implements OnInit {
       console.log(response);      
       this.canAdopt = response;
     });
+  }
+
+  deletePet(){
+    let id = this.id;
+    return this.http.delete(`${this.apiServerUrl}/pets/deletePet/${id}`);
   }
 
 }
