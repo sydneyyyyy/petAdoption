@@ -21,7 +21,7 @@
       <td>
         <button id="btn btn-primary" [value]="applicationList[i].id" (click)="approveApp(applicationList[i].id)">Approve</button>
         <button id="btn btn-primary" [value]="applicationList[i].id" (click)="denyApp(applicationList[i].id)">Deny</button>
-        <button id="btn btn-primary" (click)="requestInfo()">Request Information</button>
+        <button id="btn btn-primary" [value]="applicationList[i].id" (click)="requestInfo(applicationList[i].id)">Request Information</button>
       </td>
     </tr>
 </table>
