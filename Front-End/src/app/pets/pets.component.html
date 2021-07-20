@@ -1,7 +1,54 @@
 
 <app-pet-search></app-pet-search>
 
-<div id="pet-container">
+<!-- 
+  <div class="modal fade" id="addPetModel" tabindex="-1" role="dialog" aria-labelledby="addPetModelLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="addPetModelLabel">Add Pet</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div> -->
+         <div class="modal-body">
+            <form #addForm="ngForm" (ngSubmit)="onAddPet(addForm)">
+              <div class="add-pet-form"> 
+                <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
+              </div>
+              <div class="add-pet-form">
+                <input type="email" ngModel name="age" class="form-control" id="age" placeholder="Age" required>
+              </div>
+              <div class="add-pet-form">
+                <input type="text" ngModel name="gender" class="form-control" id="gender" placeholder="Gender" required>
+              </div>
+              <div class="add-pet-form">
+                <input type="text" ngModel name="image" class="form-control" id="image" placeholder="Image URL" required>
+              </div>
+              <div class="add-pet-form">
+                <input type="text" ngModel name="price" class="form-control" id="price" placeholder="Price" required>
+              </div>
+              <div class="add-pet-form">
+                <input type="text" ngModel name="size" class="form-control" id="size" placeholder="Size" required>
+              </div>
+              <select class="add-pet-form">
+               
+                <option type="select" ngModel name="breed" class="form-control" id="breed" placeholder="Breed" required>
+                  
+                </option>
+              </select>
+              <div class="footer">
+                <!-- <button type="button" id="add-pet-form" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Save changes</button>
+              </div>
+            </form>
+          </div>
+       <!-- </div>
+     </div>
+    </div> -->
+
+  <!-- <button>Add Pet</button> -->
+<div id="pet-container">  
   <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
     <img src={{pet.image}} class="card-img-top" alt="...">
     <div class="card-body">
@@ -10,4 +57,3 @@
     </div>
   </div>
 </div>
-
