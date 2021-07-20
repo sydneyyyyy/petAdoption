@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
   }
 
   public login(customer: Customer): Observable<Customer> {
+    localStorage.setItem('isEmployee', 'false');
     this.authService.login(customer);
     return null;
   }

@@ -57,6 +57,7 @@ export class AuthService {
       console.log(response);  
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
+      this.loggedIn.next(true);
       if(response != null){
         this.router.navigate(['pets']);
         return this.employees;

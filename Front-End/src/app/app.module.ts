@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DogsComponent } from './dogs/dogs.component';
 import { SpeciesComponent } from './species/species.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { ApplicationsComponent } from './applications/applications.component';
 
 
 
@@ -34,7 +35,8 @@ import { EmployeeComponent } from './employee/employee.component';
     PetSearchComponent,
     DogsComponent,
     SpeciesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ApplicationsComponent
 
   ],
   imports: [

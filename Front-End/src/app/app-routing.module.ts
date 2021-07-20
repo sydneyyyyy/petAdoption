@@ -8,6 +8,7 @@ import { PetsComponent } from './pets/pets.component';
 import { PetDetailComponent } from './pet-detail/pet-detail.component';
 import { AdoptFormComponent } from './adopt-form/adopt-form.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { ApplicationsComponent } from './applications/applications.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "applications", component: AdoptFormComponent},
   { path: 'home', component: HomeComponent },
   { path: 'employees/login', component: EmployeeComponent},
+  { path: 'applications/employee', component: ApplicationsComponent },
   { path: '**', component: HomeComponent },
   
   // { path: 'pets/species/:id', component: SpeciesComponent }

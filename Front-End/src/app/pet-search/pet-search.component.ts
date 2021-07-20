@@ -17,14 +17,14 @@ export class PetSearchComponent {
   pets: any;
   breeds: any;
   gender: any;
-  male: any;
-  female: any;
   private apiServerUrl = environment.apiBaseUrl;
   id: any;
   sid: any;
+  bid: any;
 
   constructor(private http: HttpClient, 
       private _Activatedroute: ActivatedRoute) {
+        
   }
 
   ngOnInit() {
@@ -33,12 +33,18 @@ export class PetSearchComponent {
     this.getSpecies();
   }
 
-  getMales() {
-
+  getMale() {
+    return this.http.get(`${this.apiServerUrl}/breeds/${this.bid}/gender/M`).subscribe(response => {
+      console.log(response);
+      this.pets = response;
+    })
   }
 
-  getFemales() {
-    
+  getFemale() {
+    return this.http.get(`${this.apiServerUrl}/breeds/${this.bid}/gender/F`).subscribe(response => {
+      console.log(response);
+      this.pets = response;
+    })
   }
 
   showSpeciesResults(id: number) {
@@ -53,6 +59,7 @@ export class PetSearchComponent {
     return this.http.get(`${this.apiServerUrl}/breeds/species/${sid}`).subscribe(response => {
       console.log(response);
       this.breeds = response;
+      
     })
   }
 
@@ -81,9 +88,11 @@ export class PetSearchComponent {
     return this.http.get(`${this.apiServerUrl}/pets/breed/${id}`).subscribe(response => {
       console.log(response);
       this.pets = response;
+      this.bid = id;
       let petsDiv = document.getElementById('pet-container');
       petsDiv.setAttribute('style', 'display: none;');
-
+      let genderDiv = document.getElementById('gender-dropdown');
+      genderDiv.setAttribute('style', 'display: contents'); 
     })
   }
 
