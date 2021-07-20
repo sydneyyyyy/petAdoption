@@ -1,6 +1,5 @@
-
+<app-header></app-header>
 <app-pet-search></app-pet-search>
-
 <div id="pet-container">
   <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
     <img src={{pet.image}} class="card-img-top" alt="...">
