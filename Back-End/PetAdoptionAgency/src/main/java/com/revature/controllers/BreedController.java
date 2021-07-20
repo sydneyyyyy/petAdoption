@@ -73,7 +73,7 @@ public class BreedController {
 		List<Pet> pets = ps.getByGender(gender);
 		List<Pet> fPets = new ArrayList();
 		for (Pet p : pets) {
-			if (p.getBreed() == b) {
+			if ((p.getBreed() == b)&&(p.isAvailable())) {
 				//pets.remove(p);
 				
 				fPets.add(p);
