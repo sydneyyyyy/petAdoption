@@ -14,8 +14,8 @@ export class AddPetComponent implements OnInit {
   breeds: any;
   species: any;
   sid: any;
-  M: any;
-  F: any;
+  gender: any = ['M', 'F'];
+  pet: any;
   private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { 
@@ -35,8 +35,12 @@ export class AddPetComponent implements OnInit {
     this.getBreeds();
   }
 
-  onAddPet() {
+  onSubmit() {
     console.log(this.addPetForm.value);
+  }
+
+  onAddPet() {
+    
   }
 
   getSpecies() {
