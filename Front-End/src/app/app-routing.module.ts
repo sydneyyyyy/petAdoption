@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PetsComponent } from './pets/pets.component';
 import { PetDetailComponent } from './pet-detail/pet-detail.component';
 import { AdoptFormComponent } from './adopt-form/adopt-form.component';
-import { DogsComponent } from './dogs/dogs.component';
-import { SpeciesComponent } from './species/species.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ApplicationsComponent } from './applications/applications.component';
+
 
 const routes: Routes = [
   { path: 'customers/login', component: LoginComponent },
@@ -18,7 +18,10 @@ const routes: Routes = [
   { path: "pets/:id", component: PetDetailComponent },
   { path: "applications", component: AdoptFormComponent},
   { path: 'home', component: HomeComponent },
+  { path: 'employees/login', component: EmployeeComponent},
+  { path: 'applications/employee', component: ApplicationsComponent },
   { path: '**', component: HomeComponent },
+  
   // { path: 'pets/species/:id', component: SpeciesComponent }
 ]
 
