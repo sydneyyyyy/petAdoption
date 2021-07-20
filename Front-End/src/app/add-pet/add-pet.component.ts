@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-add-pet',
@@ -7,9 +10,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPetComponent implements OnInit {
 
-  constructor() { }
+  addPetForm: FormGroup;
+  breeds: any;
+  species: any;
+  sid: any;
+  gender: any = ['M', 'F'];
+  pet: any;
+  private apiServerUrl = environment.apiBaseUrl;
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) { 
+    this.addPetForm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      species: new FormControl('', [Validators.required]),
+      breeds: new FormControl('', [Validators.required]),
+      gender: new FormControl('', [Validators.required]),
+      age: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
+      image: new FormControl('', [Validators.required])
+    });
+  }
+
+  ngOnInit() {
+    this.getSpecies();
+    this.getBreeds();
+  }
+
+  onSubmit() {
+    console.log(this.addPetForm.value);
+  }
+
+  onAddPet() {
+    
+  }
+
+  getSpecies() {
+    return this.http.get(`${this.apiServerUrl}/species`).subscribe(response => {
+      console.log(response);
+      this.species = response;
+    })
+  }
+
+  getBreeds() {
+    return this.http.get(`${this.apiServerUrl}/breeds`).subscribe(response => {
+      console.log(response);
+      this.breeds = response;
+      
+    })
   }
 
 }

@@ -20,9 +20,15 @@ export class AuthService {
   private apiServerUrl = environment.apiBaseUrl;
   customers: any;
   employees: any;
+  private empLoggedIn: BehaviorSubject<boolean> = new 
+  BehaviorSubject<boolean>(false);
 
   get isLoggedIn() {
     return this.loggedIn.asObservable();
+  }
+
+  get isEmpLoggedIn() {
+    return this.empLoggedIn.asObservable();
   }
 
   constructor(private router: Router, private http: HttpClient) { 
@@ -57,7 +63,7 @@ export class AuthService {
       console.log(response);  
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
-      this.loggedIn.next(true);
+      this.empLoggedIn.next(true);
       if(response != null){
         this.router.navigate(['pets']);
         return this.employees;

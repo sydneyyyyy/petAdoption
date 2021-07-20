@@ -11,14 +11,12 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { PetDetailComponent } from './pet-detail/pet-detail.component';
 import { AdoptFormComponent } from './adopt-form/adopt-form.component';
-import { CustomerComponent } from './customer/customer.component';
 import { PetSearchComponent } from './pet-search/pet-search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DogsComponent } from './dogs/dogs.component';
-import { SpeciesComponent } from './species/species.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { AddPetComponent } from './add-pet/add-pet.component';
+import { EmpHeaderComponent } from './emp-header/emp-header.component';
 
 
 
@@ -32,13 +30,11 @@ import { AddPetComponent } from './add-pet/add-pet.component';
     RegisterComponent,
     PetDetailComponent,
     AdoptFormComponent,
-    CustomerComponent,
     PetSearchComponent,
-    DogsComponent,
-    SpeciesComponent,
     EmployeeComponent,
     ApplicationsComponent,
-    AddPetComponent
+    AddPetComponent,
+    EmpHeaderComponent
 
   ],
   imports: [
