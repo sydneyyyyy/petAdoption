@@ -19,5 +19,7 @@ public List<Breed> getAll();
 	public Breed addBreed(Breed b);
 	
 	public List<Breed> getBySpecies(Species species);
+	
+	public Breed getByBname(String name);
 
 }
