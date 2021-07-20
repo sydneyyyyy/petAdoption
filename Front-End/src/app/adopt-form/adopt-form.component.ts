@@ -44,15 +44,4 @@ export class AdoptFormComponent implements OnInit {
 
   }
 
-  // public addCustomer(customer: Customer): Observable<Customer> {
-  //   let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/addCustomer`, customer).subscribe(response => {
-  //     console.log(response);
-  //     let res = JSON.stringify(response);
-  //     localStorage.setItem('currentUser', res);
-  //     window.location.reload();
-  //   });
-  //   this.router.navigate(['pets']);
-  //   return this.customer;
-  // }
-
 }

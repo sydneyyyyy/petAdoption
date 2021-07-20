@@ -21,15 +21,6 @@
       </div>
     </div>
   </div>
-  <div class="col" id="gender-dropdown" style="display: none;">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Gender</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
-        <button ngbDropdownItem value="female">Female</button>
-        <button ngbDropdownItem value="male">Male</button>
-      </div>
-    </div>
-  </div>
   <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
     <img src={{pet.image}} class="card-img-top" alt="...">
     <div class="card-body">

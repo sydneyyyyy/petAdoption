@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
 
-
 @Component({
   selector: 'app-pet-search',
   templateUrl: './pet-search.component.html',
@@ -17,8 +16,12 @@ export class PetSearchComponent {
   species: any;
   pets: any;
   breeds: any;
+  gender: any;
+  male: any;
+  female: any;
   private apiServerUrl = environment.apiBaseUrl;
   id: any;
+  sid: any;
 
   constructor(private http: HttpClient, 
       private _Activatedroute: ActivatedRoute) {
@@ -28,7 +31,6 @@ export class PetSearchComponent {
     this.id=this._Activatedroute.snapshot.paramMap.get("id");
     this.showSpeciesResults(this.id);
     this.getSpecies();
-    this.getBreeds();
   }
 
   showSpeciesResults(id: number) {
@@ -39,22 +41,23 @@ export class PetSearchComponent {
     this.getByBreed(id);
   }
 
-  getBreeds() {
-    return this.http.get(`${this.apiServerUrl}/breeds`).subscribe(response => {
+  getBreeds(sid: number) {
+    return this.http.get(`${this.apiServerUrl}/breeds/species/${sid}`).subscribe(response => {
       console.log(response);
       this.breeds = response;
     })
   }
 
   getSpecies() {
-    return this.http.get(`${this.apiServerUrl}/species`).subscribe(response => {
+    let species = this.http.get(`${this.apiServerUrl}/species`).subscribe(response => {
       console.log(response);
       this.species = response;
     })
+    return species;
   }
 
   getBySpecies(id: number) {
-    return this.http.get(`${this.apiServerUrl}/pets/species/${id}`).subscribe(response => {
+    let species = this.http.get(`${this.apiServerUrl}/pets/species/${id}`).subscribe(response => {
       console.log(response);
       this.pets = response;
       let petsDiv = document.getElementById('pet-container');
@@ -62,6 +65,8 @@ export class PetSearchComponent {
       let breedDiv = document.getElementById('breed-dropdown');
       breedDiv.setAttribute('style', 'display: contents'); 
     })
+    this.getBreeds(id)
+    return species;
   }
 
   getByBreed(id: number) {
