@@ -17,8 +17,8 @@
     <div class="adopt-form">
         <h5>Please provide us a discription about yourself and why you'd make a perfect pet owner and we'll take it into consideration</h5>
         <div>
-            <form id="adoptionform">
-                <textarea rows="4" cols="50" name="comment" form="adoptionform" placeholder="Tell us about your pets and how you'll love the new member of your home."></textarea>
+            <form id="adoptionform" [formGroup]="applicationForm"  >
+                <textarea NgModel name = "information" rows="4" cols="50" name="comment" form="adoptionform" placeholder="Tell us about your pets and how you'll love the new member of your home." formControlName="information"></textarea>
                 <button type="submit" (click)="onSubmit()" class="adopt-button btn btn-primary">Submit</button>
             </form>
         </div>

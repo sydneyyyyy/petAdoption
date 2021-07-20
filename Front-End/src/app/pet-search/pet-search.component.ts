@@ -79,10 +79,5 @@ export class PetSearchComponent {
     })
   }
 
-  
-
-
-        
-
 }
 

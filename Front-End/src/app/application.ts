@@ -4,9 +4,10 @@ import { Customer } from "./customer"
 export interface Application {
     id: number;
     subdate: string;
-    bsupapproval: false;
-    secondapproval: false;
+    bsupapproval: boolean;
+    secondapproval: boolean;
     status: string;
+    information: string;
     pet: (Pet)[];
     customer:(Customer)[];
 }
