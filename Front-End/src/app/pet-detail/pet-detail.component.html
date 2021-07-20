@@ -11,12 +11,12 @@
         <p>Size: {{pets.size}}</p>
         <p>Availability: {{canAdopt ? 'Available for adoption' : 'Adoption pending'}}</p>
     </div>
-    <button class="btn btn-primary" *ngIf="canAdopt" (click)="adoptPet()">Apply to Adopt</button>
+    <button class="btn btn-primary" *ngIf="canAdopt" (click)="adoptPet()">Apply to Adopt</button>    
+    <button class="btn btn-primary" *ngIf="isEmp" (click)="deletePet()">Delete</button>
 </div>
 
 
-<button *ngIf="canAdopt" (click)="adoptPet()">Apply to Adopt</button>
-<button *ngIf="isEmployee" (click)="deletePet()">Delete</button>
+
 
 
 
