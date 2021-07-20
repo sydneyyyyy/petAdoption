@@ -18,4 +18,6 @@ public interface BreedHibernate extends CrudRepository<Breed, Integer>{
 
 
 	public List<Breed> findBySpecies(Species species);
+	
+	public Breed findByBname(String name);
 }

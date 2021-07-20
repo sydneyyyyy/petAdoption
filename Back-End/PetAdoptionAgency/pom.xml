@@ -19,7 +19,9 @@
 	<properties>
 		<java.version>1.8</java.version>
 		</properties>
-		
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+>>>>>>> e26cec527ade1d1ec981217c527dfc5554d0e6ea
 	<dependencies>
 	
 		<dependency>
