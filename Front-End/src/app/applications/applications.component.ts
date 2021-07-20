@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Application } from '../application';
 
@@ -11,11 +12,14 @@ import { Application } from '../application';
 export class ApplicationsComponent implements OnInit {
   private apiServerUrl = environment.apiBaseUrl;
   applicationList: any;
+  id: any;
+  aid: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _Activatedroute: ActivatedRoute) { }
 
   ngOnInit() {
     this.getEmpApps();
+    this.id=this._Activatedroute.snapshot.paramMap.get("id");
   }
 
   getEmpApps() {
@@ -26,12 +30,16 @@ export class ApplicationsComponent implements OnInit {
     })
   }
 
-  approveApp(application: Application) {
-    return this.http.post<Application>(`${this.apiServerUrl}/applications/${application.id}`, application)
+  approveApp(aid: number) {
+    return this.http.put<Application>(`${this.apiServerUrl}/applications/${aid}`, aid).subscribe(response => {
+      console.log(response);
+    })
   }
 
-  denyApp(id: number) {
-
+  denyApp(aid: number) {
+    return this.http.put<Application>(`${this.apiServerUrl}/applications/${aid}`, aid).subscribe(response => {
+      console.log(response);
+    })
   }
 
 
