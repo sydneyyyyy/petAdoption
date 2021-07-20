@@ -1,12 +1,32 @@
 <div class="search-container">
-  <div class="col">
+  <div class="col" id="species-dropdown" style="display: contents;">
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Species</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
         <button ngbDropdownItem *ngFor="let spec of species; let i = index" 
                 [value]="species[i].id"
-                (click)="showResults(species[i].id)">
+                (click)="showSpeciesResults(species[i].id)">
           {{species[i].sName}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="breed-dropdown" style="display: none;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Breed</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem *ngFor="let breed of breeds; let i = index" 
+                [value]="breeds[i].id"
+                (click)="showBreedResults(breeds[i].id)">
+          {{breeds[i].bname}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="gender-dropdown" style="display: none;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Gender</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem (click)="getFemale()">Female</button>
+        <button ngbDropdownItem (click)="getMale()">Male</button>
       </div>
     </div>
   </div>

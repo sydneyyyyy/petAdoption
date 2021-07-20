@@ -43,10 +43,10 @@ export class AuthService {
         console.log("test");
         return this.customers;
       }
-      else{
-        this.loginEmp(this.loginForm.value);
+      // else{
+      //   this.loginEmp(customer.username, customer.password);
         
-      }
+      // }
     });
     
     return null;
@@ -54,13 +54,14 @@ export class AuthService {
 
   public loginEmp(employee: Employee): Observable<Employee> {
     let emp = this.http.post<Employee>(`${this.apiServerUrl}/employees/login`, employee).subscribe(response => {
-      console.log(response);      
+      console.log(response);  
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
-     if(response != null){
-      this.router.navigate(['pets']);
-      return this.employees;
-    }
+      this.loggedIn.next(true);
+      if(response != null){
+        this.router.navigate(['pets']);
+        return this.employees;
+      }
     
     });
     

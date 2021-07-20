@@ -31,11 +31,7 @@ export class AdoptFormComponent implements OnInit {
     console.log(application);
     let app = this.http.post<Application>(`${this.apiServerUrl}/applications/addApplication`, application).subscribe(response => {
       console.log(response);
-      // let res = JSON.stringify(response);
-      // localStorage.getItem('currentUser');
-      // window.location.reload();
     });
-    // this.router.navigate(['applications']);
     return this.application;
     
   }
@@ -56,16 +52,5 @@ export class AdoptFormComponent implements OnInit {
     this.addApplication(this.application);
     
   }
-
-  // public addCustomer(customer: Customer): Observable<Customer> {
-  //   let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/addCustomer`, customer).subscribe(response => {
-  //     console.log(response);
-  //     let res = JSON.stringify(response);
-  //     localStorage.setItem('currentUser', res);
-  //     window.location.reload();
-  //   });
-  //   this.router.navigate(['pets']);
-  //   return this.customer;
-  // }
 
 }
