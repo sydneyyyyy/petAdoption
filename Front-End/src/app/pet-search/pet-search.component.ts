@@ -33,6 +33,14 @@ export class PetSearchComponent {
     this.getSpecies();
   }
 
+  getMales() {
+
+  }
+
+  getFemales() {
+    
+  }
+
   showSpeciesResults(id: number) {
     this.getBySpecies(id);
   }

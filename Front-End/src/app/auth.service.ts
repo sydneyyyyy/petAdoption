@@ -43,23 +43,18 @@ export class AuthService {
         console.log("test");
         return this.customers;
       }
-      else{
-        this.loginEmp(customer.username, customer.password);
+      // else{
+      //   this.loginEmp(customer.username, customer.password);
         
-      }
+      // }
     });
     
     return null;
   }
 
-  public loginEmp(username, password): Observable<Employee> {
-    var employee = {
-      un: username,
-      pn: password
-    };
+  public loginEmp(employee: Employee): Observable<Employee> {
     let emp = this.http.post<Employee>(`${this.apiServerUrl}/employees/login`, employee).subscribe(response => {
       console.log(response);  
-      console.log(employee);    
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
       if(response != null){
