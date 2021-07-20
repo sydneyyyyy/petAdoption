@@ -1,0 +1,21 @@
+<app-header></app-header>
+<table id="applications-table" >
+    <tr>
+      <th>Customer Name</th>
+      <th>Pet Name</th>
+      <th>Breed</th>
+      <th>Supervisor Approval</th>
+      <th>Second Approval</th>
+      <th>Status</th>
+      <th>Information</th>
+    </tr>
+    <tr *ngFor="let app of applicationList; let i = index">
+      <td>{{app.customer.fname}} {{app.customer.lname}}</td>
+      <td>{{app.pet.name}}</td>
+      <td>{{app.pet.breed.bname}}</td>
+      <td>{{app.bsupapproval}}</td>
+      <td>{{app.secondapproval}}</td>
+      <td>{{app.status}}</td>
+      <td>{{app.information}}</td>
+    </tr>
+</table>

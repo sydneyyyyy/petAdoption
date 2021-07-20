@@ -42,6 +42,7 @@ export class EmployeeComponent implements OnInit {
 
   public loginEmp(employee: Employee): Observable<Employee> {
     localStorage.setItem('isEmployee', 'true');
+
     this.authService.loginEmp(employee);
     return null;
   }

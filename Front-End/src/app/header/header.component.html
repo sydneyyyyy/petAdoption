@@ -10,6 +10,12 @@
           <a class="nav-link"   [routerLink]="['/customers/addCustomer']" routerLinkActive="active" *ngIf="loginStatus">Register</a>
         </li>
         <li class="nav-item" *ngIf="(loginStatus$ | async) as loginStatus">
+          <a class="nav-link" [routerLink]="['/applications/customer']" routerLinkActive="active" *ngIf="loginStatus">Applications</a>
+        </li>
+        <li class="nav-item" *ngIf="(loginStatus$ | async) as loginStatus">
+          <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="active" *ngIf="loginStatus">Pets</a>
+        </li>
+        <li class="nav-item" *ngIf="(loginStatus$ | async) as loginStatus">
           <a class="nav-link" (click)="onLogout()" *ngIf="loginStatus">Logout</a>
         </li>
       </ul>

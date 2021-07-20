@@ -17,6 +17,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { AddPetComponent } from './add-pet/add-pet.component';
 import { EmpHeaderComponent } from './emp-header/emp-header.component';
+import { CustomerApplicationsComponent } from './customer-applications/customer-applications.component';
 
 
 
@@ -34,7 +35,8 @@ import { EmpHeaderComponent } from './emp-header/emp-header.component';
     EmployeeComponent,
     ApplicationsComponent,
     AddPetComponent,
-    EmpHeaderComponent
+    EmpHeaderComponent,
+    CustomerApplicationsComponent
 
   ],
   imports: [
