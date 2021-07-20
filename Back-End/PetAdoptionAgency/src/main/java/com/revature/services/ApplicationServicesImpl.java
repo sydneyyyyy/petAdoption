@@ -74,6 +74,7 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		List<Application> appList = new ArrayList();
 		List<Pet> petList = new ArrayList();
 		List<Breed> bList = bh.findBySpecies(species);
+		List<Application> finalAppList = new ArrayList(); 
 		
 		for(Breed b : bList ) {
 			petList.addAll(pr.findByBreed(b));
@@ -86,12 +87,12 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		//to get by petId we first need to find all pets with species
 		//then for each pet with that species we want to find the application by PID and add it to appList
 		for (Application app : appList) {
-			if((app.getBsupapproval())||(app.getStatus().equals("denied"))) {
-				appList.remove(app);
+			if((!app.getBsupapproval())&&(!app.getStatus().equals("denied"))) {
+				finalAppList.add(app);
 			}
 		}
 		//List<Application> aPList = ah.fin
-		return appList;
+		return finalAppList;
 	}
 
 	@Override
