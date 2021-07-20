@@ -122,6 +122,7 @@ public class ApplicationController {
 			app.setStatus("approved");
 			Pet p = app.getPet();
 			p.setAvailable(false);
+			System.out.println(p.isAvailable());
 			ps.updatePet(p);
 
 			return as.updateApplication(app);
