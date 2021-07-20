@@ -117,13 +117,14 @@ public class ApplicationServicesImpl implements ApplicationServices {
 	public boolean canAdopt(Pet p) {
 
 		List<Application> appList = ah.findByPet(p);
+		List<Application> fList = new ArrayList();
 		for(Application app : appList) {
-			if (app.getStatus().equals("denied")) {
-				appList.remove(app);
+			if (!app.getStatus().equals("denied")) {
+				fList.add(app);
 			}
 		}
 		
-		if(appList.isEmpty()) {
+		if(fList.isEmpty()) {
 			return true;
 		}
 		
