@@ -53,10 +53,10 @@ export class LoginComponent implements OnInit {
     return null;
   }
 
-  public loginEmp(employee: Employee): Observable<Employee> {
-    this.authService.loginEmp(employee);
-    return null;
-  }
+  // public loginEmp(employee: Employee): Observable<Employee> {
+  //   this.authService.loginEmp(employee);
+  //   return null;
+  // }
 
   
 }

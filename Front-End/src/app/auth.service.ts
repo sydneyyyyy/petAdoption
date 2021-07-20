@@ -44,7 +44,7 @@ export class AuthService {
         return this.customers;
       }
       else{
-        this.loginEmp(this.loginForm.value);
+        this.loginEmp(customer.username, customer.password);
         
       }
     });
@@ -52,15 +52,20 @@ export class AuthService {
     return null;
   }
 
-  public loginEmp(employee: Employee): Observable<Employee> {
+  public loginEmp(username, password): Observable<Employee> {
+    var employee = {
+      un: username,
+      pn: password
+    };
     let emp = this.http.post<Employee>(`${this.apiServerUrl}/employees/login`, employee).subscribe(response => {
-      console.log(response);      
+      console.log(response);  
+      console.log(employee);    
       let res = JSON.stringify(response);
       localStorage.setItem('currentUser', res);
-     if(response != null){
-      this.router.navigate(['pets']);
-      return this.employees;
-    }
+      if(response != null){
+        this.router.navigate(['pets']);
+        return this.employees;
+      }
     
     });
     

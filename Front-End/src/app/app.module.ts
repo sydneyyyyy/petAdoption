@@ -16,6 +16,7 @@ import { PetSearchComponent } from './pet-search/pet-search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DogsComponent } from './dogs/dogs.component';
 import { SpeciesComponent } from './species/species.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 
 
@@ -33,6 +34,7 @@ import { SpeciesComponent } from './species/species.component';
     PetSearchComponent,
     DogsComponent,
     SpeciesComponent,
+    EmployeeComponent
 
   ],
   imports: [
