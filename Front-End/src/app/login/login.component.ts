@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   private apiServerUrl = environment.apiBaseUrl;
   customers: any;
-  employees: any;
+  
   loginStatus$: Observable<boolean>;
   
   constructor(private http: HttpClient, private router: Router, 
@@ -49,14 +49,12 @@ export class LoginComponent implements OnInit {
   }
 
   public login(customer: Customer): Observable<Customer> {
+    localStorage.setItem('isEmployee', 'false');
     this.authService.login(customer);
     return null;
   }
 
-  public loginEmp(employee: Employee): Observable<Employee> {
-    this.authService.loginEmp(employee);
-    return null;
-  }
+  
 
   
 }
