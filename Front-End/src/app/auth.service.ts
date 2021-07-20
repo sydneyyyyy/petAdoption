@@ -65,7 +65,7 @@ export class AuthService {
       localStorage.setItem('currentUser', res);
       this.empLoggedIn.next(true);
       if(response != null){
-        this.router.navigate(['pets']);
+        this.router.navigate(['applications/employee']);
         return this.employees;
       }
     
