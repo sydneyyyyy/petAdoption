@@ -30,7 +30,7 @@ import com.revature.services.PetServicesImpl;
 
 @RestController
 @RequestMapping("/applications")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://p2petadoption.s3-website-us-east-1.amazonaws.com/")
 public class ApplicationController {
 	private static final Logger logger = LoggerFactory.getLogger(ApplicationController.class);
 	

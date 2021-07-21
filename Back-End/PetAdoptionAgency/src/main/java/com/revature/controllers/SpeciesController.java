@@ -22,7 +22,7 @@ import com.revature.services.SpeciesServicesImpl;
 
 @RestController
 @RequestMapping("/species")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://p2petadoption.s3-website-us-east-1.amazonaws.com/")
 public class SpeciesController {
 	private static final Logger logger = LoggerFactory.getLogger(SpeciesController.class);
 	
