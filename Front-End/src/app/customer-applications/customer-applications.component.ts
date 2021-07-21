@@ -37,7 +37,7 @@ export class CustomerApplicationsComponent implements OnInit {
         bsupapproval: this.applications.bsupapproval,
         secondapproval: this.applications.secondapproval,
         status: "",
-        information: this.applications.information + "user response: " + this.moreInfo,
+        information: this.applications.information + " user response: " + this.moreInfo,
         pet: this.applications.pet,
         customer: this.applications.customer,
       }
