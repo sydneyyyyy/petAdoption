@@ -22,7 +22,7 @@ import com.revature.services.*;
 
 @RestController
 @RequestMapping("/customers")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CustomerController {
 	private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 	
