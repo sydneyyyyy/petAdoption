@@ -23,7 +23,7 @@ import com.revature.services.EmployeeServicesImpl;
 
 @RestController
 @RequestMapping("/employees")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController {
 	private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 	
