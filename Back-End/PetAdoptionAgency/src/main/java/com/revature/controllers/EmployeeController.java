@@ -23,7 +23,7 @@ import com.revature.services.EmployeeServicesImpl;
 
 @RestController
 @RequestMapping("/employees")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://p2petadoption.s3-website-us-east-1.amazonaws.com/")
 public class EmployeeController {
 	private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 	
