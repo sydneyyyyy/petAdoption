@@ -21,6 +21,7 @@ export class ApplicationsComponent implements OnInit {
   ngOnInit() {
     this.getEmpApps();
     this.id=this._Activatedroute.snapshot.paramMap.get("id");
+    this.application = new Object();
   }
 
   getEmpApps() {
@@ -29,6 +30,32 @@ export class ApplicationsComponent implements OnInit {
       console.log(response);
       this.applicationList = response;
     })
+  }
+
+  requestInfo(aid: number) {
+    console.log("request clicked...");
+    let app = this.http.get(`${this.apiServerUrl}/applications/${aid}`).subscribe(response => {
+      console.log(response);
+      this.application = response;
+      const body = {
+        id: aid,
+        subdate: this.application.subdate,
+        bsupapproval: this.application.bsupapproval,
+        secondapproval: this.application.secondapproval,
+        status: "more info requested",
+        information: this.application.information,
+        pet: this.application.pet,
+        customer: this.application.customer,
+      }
+      return this.http.put<Application>(`${this.apiServerUrl}/applications/${aid}`, body).subscribe(response => {
+        console.log(response);
+        this.application = response;
+      })
+    })
+    // this.application.status = "more information requested";
+
+    
+    
   }
 
   approveApp(aid: number) {
