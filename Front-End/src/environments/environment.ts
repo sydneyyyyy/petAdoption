@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  apiBaseUrl: 'http://localhost:8080'
+  production: true,
+  apiBaseUrl: 'http://ec2-3-15-144-140.us-east-2.compute.amazonaws.com:8080/PetAdoptionAgency-0.0.1-SNAPSHOT'
 };
 
 /*
