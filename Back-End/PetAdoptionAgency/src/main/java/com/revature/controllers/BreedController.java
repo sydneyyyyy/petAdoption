@@ -26,7 +26,7 @@ import com.revature.services.SpeciesServicesImpl;
 
 @RestController
 @RequestMapping("/breeds")
-@CrossOrigin(origins = "http://p2petadoption.s3-website-us-east-1.amazonaws.com/")
+@CrossOrigin(origins = "http://localhost:4200")
 public class BreedController {
 	private static final Logger logger = LoggerFactory.getLogger(BreedController.class);
 	

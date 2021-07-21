@@ -10,6 +10,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -18,6 +19,7 @@ import org.springframework.web.filter.CorsFilter;
 @ComponentScan("com.revature")
 @EnableJpaRepositories("com.revature.repos")
 @EntityScan("com.revature.beans")
+
 public class PetAdoptionAgencyApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
@@ -34,7 +36,7 @@ public class PetAdoptionAgencyApplication extends SpringBootServletInitializer{
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200","http://p2petadoption.s3-website-us-east-1.amazonaws.com"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type", "Accept",
 				"Authorization", "Origin, Accept", "X-Requested-With", "Access-Control-Request-Method", 
 				"Access-Control-Request-Headers"));
