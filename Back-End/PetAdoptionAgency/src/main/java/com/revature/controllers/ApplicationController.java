@@ -30,7 +30,7 @@ import com.revature.services.PetServicesImpl;
 
 @RestController
 @RequestMapping("/applications")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ApplicationController {
 	private static final Logger logger = LoggerFactory.getLogger(ApplicationController.class);
 	
