@@ -18,8 +18,11 @@
       <td>{{app.secondapproval}}</td>
       <td>{{app.status}}</td>
       <td>{{app.information}}</td>
-      <td><button id="btn btn-primary" [value]="applicationList[i].id" (click)="approveApp(applicationList[i].id)">Approve</button>
-        <button id="btn btn-primary" [value]="applicationList[i].id" (click)="denyApp(applicationList[i].id)">Deny</button></td>
+      <td>
+        <button id="btn btn-primary" [value]="applicationList[i].id" (click)="approveApp(applicationList[i].id)">Approve</button>
+        <button id="btn btn-primary" [value]="applicationList[i].id" (click)="denyApp(applicationList[i].id)">Deny</button>
+        <button id="btn btn-primary" [value]="applicationList[i].id" (click)="requestInfo(applicationList[i].id)">Request Information</button>
+      </td>
     </tr>
 </table>
   
