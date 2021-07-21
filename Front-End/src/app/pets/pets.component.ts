@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,24 +10,31 @@ import { environment } from 'src/environments/environment';
 })
 export class PetsComponent implements OnInit {
 
-  private apiServerUrl =  environment.apiBaseUrl;
+
+  private apiServerUrl = environment.apiBaseUrl;
   pets: any;
   
-  constructor(private http: HttpClient) { 
+
+  constructor(private http: HttpClient, private router: Router) { 
     
   }
 
   ngOnInit() {
-    this.getPets();
+    this.getAvailablePets();
   }
 
-  getPets() {
-    return this.http.get(`${this.apiServerUrl}/pets`).subscribe(response => {
+  petDetail() {
+    this.router.navigate(['pets/{id}']);
+  }
+
+  getAvailablePets() {
+    return this.http.get(`${this.apiServerUrl}/pets/available/true`).subscribe(response => {
       console.log(response);
       this.pets = response;
     }, error => {
       console.log(error);
     });
+
   }
 
 }

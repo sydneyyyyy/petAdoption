@@ -1,5 +1,6 @@
 package com.revature.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.*;
@@ -48,24 +49,27 @@ public class ApplicationController {
 		this.cs = cs;
 	}
 	
-	//@GetMapping()
-	//public ResponseEntity<List<Pet>> getAllPets(){
-		
-	//	List<Pet> pets = ps.getAll();
-	//	return ResponseEntity.ok(pets);
-	//}
+	@GetMapping(produces="application/json")
+	public List<Application> getAllApplication(){
+		List<Application> apps = as.getAll();
+		return apps;
+	}
 	
-	@GetMapping(value="/{eId}" , produces="application/json")
+
+	@GetMapping(value="/employee/{eId}" , produces="application/json")
+
 	public List<Application> getEmpApplications(@PathVariable("eId") int eId){
 		//Get the logged in user
 		Employee emp = es.getEmployeeById(eId);
 		List<Application> a = as.getAll();
 		List<Application> empAppList = as.getBySpecies(emp.getSpecies());
 		
+
+		
 		//Need to filter out second approval for the employee's own species
 		for (Application app : a){
-			if ((app.getStatus().equals("submitted"))) {empAppList.add(app);}
-			else if ((app.getStatus().equals("secondApproval"))&&(app.getPet().getBreed().getSpecies() != emp.getSpecies())) {
+			//if ((app.getStatus().equals("submitted"))) {empAppList.add(app);}
+			 if ((app.getStatus().equals("secondApproval"))&&(app.getPet().getBreed().getSpecies() != emp.getSpecies())) {
 				empAppList.add(app);
 			}
 		}
@@ -73,6 +77,12 @@ public class ApplicationController {
 		
 		return empAppList;
 	} 
+	
+	@GetMapping("/canAdopt/{pId}")
+	public boolean canAdopt(@PathVariable("pId") int pId) {
+		Pet p = ps.getPetById(pId);
+		return as.canAdopt(p);
+	}
 	
 	@GetMapping(value="customer/{cId}" , produces="application/json")
 	public List<Application> getCustApplications(@PathVariable("cId") int cId){
@@ -100,7 +110,14 @@ public class ApplicationController {
 	@ResponseStatus(value=HttpStatus.OK)
 	public Application updateApplication(@PathVariable("id") int id, @RequestBody Application app) {
 		if (id == app.getId()) {
+			if (app.getStatus().equals("approved")) {
+				Pet p = app.getPet();
+				p.setAvailable(false);
+				System.out.println(p);
+				ps.updatePet(p);
+			}
 			return as.updateApplication(app);
+			
 		}
 		if (app.getStatus().equals("submitted")) {
 			return as.updateApplication(app);
@@ -112,8 +129,16 @@ public class ApplicationController {
 			app.setStatus("approved");
 			Pet p = app.getPet();
 			p.setAvailable(false);
+			System.out.println(p.isAvailable());
 			ps.updatePet(p);
 
+			return as.updateApplication(app);
+		}else if (app.getStatus().equals("approved")) {
+			Pet p = app.getPet();
+			p.setAvailable(false);
+			System.out.println(p);
+			ps.updatePet(p);
+			
 			return as.updateApplication(app);
 		}
 		return null;

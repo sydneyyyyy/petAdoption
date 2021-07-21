@@ -1,0 +1,24 @@
+#pet-img {
+    height: 400px;
+}
+
+.pet-detail-container {
+    margin: 20px;
+}
+
+.pet-name h3 {
+    font-size: 50px;
+}
+.information {
+    display: inline-block;
+    margin: 40px 0 0px 40px;
+}
+
+.pet-name {
+    display: inline-block;
+}
+
+.btn {
+    display: block;
+    margin-top: 20px;
+}

@@ -59,4 +59,10 @@ public class BreedServicesImpl implements BreedServices {
 		return bh.findBySpecies(species);
 	}
 
+	@Override
+	public Breed getByBname(String name) {
+		// TODO Auto-generated method stub
+		return bh.findByBname(name);
+	}
+
 }

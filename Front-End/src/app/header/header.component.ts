@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public isLoggedIn = localStorage.getItem('currentUser');
+  isLoggedIn$: Observable<boolean>;
+  
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.loginStatus$ = this.authService.isLoggedIn;
     
   }
 
-  public logout() {
-    console.log("logout clicked..");
-    localStorage.removeItem('currentUser');
+  loginStatus$: Observable<boolean>;
+  
+
+  onLogout() {
+    this.authService.logout();
   }
 }

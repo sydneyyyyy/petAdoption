@@ -1,0 +1,40 @@
+<div class="search-container">
+  <div class="col" id="species-dropdown" style="display: contents;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Species</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem *ngFor="let spec of species; let i = index" 
+                [value]="species[i].id"
+                (click)="showSpeciesResults(species[i].id)">
+          {{species[i].sName}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="breed-dropdown" style="display: none;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Breed</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem *ngFor="let breed of breeds; let i = index" 
+                [value]="breeds[i].id"
+                (click)="showBreedResults(breeds[i].id)">
+          {{breeds[i].bname}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="gender-dropdown" style="display: none;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>Gender</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem (click)="getFemale()">Female</button>
+        <button ngbDropdownItem (click)="getMale()">Male</button>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let pet of pets" class="card" style="width: 18rem;" [routerLink]="['/pets', pet.id]">
+    <img src={{pet.image}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{pet.name}}</h5>
+      <p class="card-text">{{pet.breed.bname}}</p>
+    </div>
+  </div>
+</div>

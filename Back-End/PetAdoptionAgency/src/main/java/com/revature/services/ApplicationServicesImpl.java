@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 
 import com.revature.beans.Application;
 import com.revature.beans.Breed;
+import com.revature.beans.Customer;
 import com.revature.beans.Pet;
 import com.revature.beans.Species;
 import com.revature.repos.ApplicationHibernate;
 import com.revature.repos.BreedHibernate;
+import com.revature.repos.CustomerHibernate;
 import com.revature.repos.PetRepo;
 
 @Service
@@ -20,12 +22,14 @@ public class ApplicationServicesImpl implements ApplicationServices {
 	private ApplicationHibernate ah;
 	private PetRepo pr;
 	private BreedHibernate bh;
+	private CustomerHibernate ch;
 	
 	@Autowired
-	public ApplicationServicesImpl(ApplicationHibernate ah, PetRepo pr, BreedHibernate bh) {
+	public ApplicationServicesImpl(ApplicationHibernate ah, PetRepo pr, BreedHibernate bh, CustomerHibernate ch) {
 		this.ah = ah;
 		this.pr = pr;
 		this.bh = bh;
+		this.ch = ch;
 	}
 
 	@Override
@@ -70,23 +74,25 @@ public class ApplicationServicesImpl implements ApplicationServices {
 		List<Application> appList = new ArrayList();
 		List<Pet> petList = new ArrayList();
 		List<Breed> bList = bh.findBySpecies(species);
+		List<Application> finalAppList = new ArrayList(); 
 		
 		for(Breed b : bList ) {
 			petList.addAll(pr.findByBreed(b));
 		}
 		
 		for (Pet p : petList) {
-			appList.addAll(ah.findByPet(p.getId()));
+			
+			appList.addAll(ah.findByPet(p));
 		}
 		//to get by petId we first need to find all pets with species
 		//then for each pet with that species we want to find the application by PID and add it to appList
 		for (Application app : appList) {
-			if((app.getBsupapproval())||(app.getStatus().equals("denied"))) {
-				appList.remove(app);
+			if((!app.getBsupapproval())&&(!app.getStatus().equals("denied"))) {
+				finalAppList.add(app);
 			}
 		}
 		//List<Application> aPList = ah.fin
-		return appList;
+		return finalAppList;
 	}
 
 	@Override
@@ -104,7 +110,26 @@ public class ApplicationServicesImpl implements ApplicationServices {
 	@Override
 	public List<Application> getByCustomer(Integer cId) {
 		
-		return ah.findByCustomer(cId);
+		Customer c = ch.findById(cId).orElse(null);
+		return ah.findByCustomer(c);
+	}
+
+	@Override
+	public boolean canAdopt(Pet p) {
+
+		List<Application> appList = ah.findByPet(p);
+		List<Application> fList = new ArrayList();
+		for(Application app : appList) {
+			if (!app.getStatus().equals("denied")) {
+				fList.add(app);
+			}
+		}
+		
+		if(fList.isEmpty()) {
+			return true;
+		}
+		
+		return false;
 	}
 
 	

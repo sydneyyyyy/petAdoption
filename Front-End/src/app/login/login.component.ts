@@ -4,7 +4,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { AuthService } from '../auth.service';
 import { Customer } from '../customer';
+import { Employee } from '../employee';
 
 
 @Component({
@@ -17,7 +19,10 @@ export class LoginComponent implements OnInit {
   private apiServerUrl = environment.apiBaseUrl;
   customers: any;
   
-  constructor(private http: HttpClient, private router: Router) {
+  loginStatus$: Observable<boolean>;
+  
+  constructor(private http: HttpClient, private router: Router, 
+    private authService: AuthService) {
     this.loginForm = new FormGroup({
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
@@ -31,6 +36,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.getCustomers();
+    this.loginStatus$ = this.authService.isLoggedIn;
   }
 
   getCustomers() {
@@ -43,17 +49,13 @@ export class LoginComponent implements OnInit {
   }
 
   public login(customer: Customer): Observable<Customer> {
-    let cust = this.http.post<Customer>(`${this.apiServerUrl}/customers/login`, customer).subscribe(response => {
-      console.log(response);
-      let res = JSON.stringify(response);
-      localStorage.setItem('currentUser', res);
-      window.location.reload();
-    });
-    this.router.navigate(['pets']);
-    return this.customers;
+    localStorage.setItem('isEmployee', 'false');
+    this.authService.login(customer);
+    return null;
   }
 
   
 
   
 }
+

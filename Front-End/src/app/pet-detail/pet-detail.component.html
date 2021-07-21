@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="pet-detail-container">
+    <div class="pet-name" *ngIf="pets">
+        <h3>{{pets.name}}</h3>
+        <img id="pet-img" src={{pets.image}}>
+    </div>
+    <div class="information">
+        <p>Breed: {{pets.breed.bname}}</p>
+        <p>Age: {{pets.age}}</p>
+        <p>Gender: {{pets.gender}}</p>
+        <p>Price: ${{pets.price}}</p>
+        <p>Size: {{pets.size}}</p>
+        <p>Availability: {{canAdopt ? 'Available for adoption' : 'Adoption pending'}}</p>
+    </div>
+    <button class="btn btn-primary" *ngIf="canAdopt" (click)="adoptPet()">Apply to Adopt</button>    
+    <button class="btn btn-primary" *ngIf="isEmp" (click)="deletePet()">Delete</button>
+</div>
+
+
+
+
+
+

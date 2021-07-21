@@ -1,0 +1,17 @@
+<app-emp-header></app-emp-header>
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <h3>Login</h3>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-container">
+            <div class="form-group">
+                <label for="username">Username: </label>
+                <input class="form-control" id="username" type="text" formControlName="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input class="form-control" id="password" type="password" formControlName="password">
+            </div>
+            <button type="submit" class="btn btn-primary" >Login</button>
+        </form>
+    </div>
+</div>

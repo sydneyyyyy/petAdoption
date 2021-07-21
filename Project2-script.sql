@@ -7,6 +7,53 @@ select * from pet;
 select * from application;
 select * from employee;
 select * from status;
+select * from pet where gender='M';
+
+select * from pet
+where bid=1;
+
+select * from pet
+where bid=2;
+
+select * from pet
+where bid=3;
+
+select * from pet
+where bid=4;
+
+select * from pet
+where bid=5;
+
+select * from pet
+where bid=6;
+select * from pet
+where bid=7;
+select * from pet
+where bid=8;
+select * from pet
+where bid=9;
+select * from pet
+where bid=10;
+select * from pet
+where bid=11;
+select * from pet
+where bid=12;
+select * from pet
+where bid=13;
+select * from pet
+where bid=14;
+select * from pet
+where bid=15;
+select * from pet
+where bid=16;
+select * from pet
+where bid=17;
+select * from pet
+where bid=18;
+select * from pet
+where bid=19;
+select * from pet
+where bid=20;
 
 --Drops--
 drop table status;
@@ -20,6 +67,8 @@ alter table breed add column sid int references species(id);
 
 alter table pet drop column sid;
 
+ALTER table customer drop column information;
+alter table application add column information varchar;
 alter table application drop column status;
 alter table application drop column bsupapproval;
 alter table application drop column secondapproval;
@@ -40,6 +89,22 @@ alter table customer add unique (username);
 update breed 
 set sid=1
 where id=1;
+
+update pet 
+set image='https://i.etsystatic.com/25790790/r/il/a836ee/2854547437/il_1588xN.2854547437_bthr.jpg'
+where id=1;
+
+update pet 
+set image='https://static.wixstatic.com/media/d7ffa3_3bdbcb4f32174feaa6c36aaca7278530~mv2.jpg/v1/fill/w_729,h_729,al_c,q_90/d7ffa3_3bdbcb4f32174feaa6c36aaca7278530~mv2.jpg'
+where id=11;
+
+update pet 
+set image='https://blog.mystart.com/wp-content/uploads/MyCats_5734d857e27b998709c9dbd6.jpeg'
+where id=27;
+
+update pet 
+set image='https://upload.wikimedia.org/wikipedia/commons/f/fb/Amazona_amazonica_2c.jpg'
+where id=39;
 
 update breed 
 set sid=2
