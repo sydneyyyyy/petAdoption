@@ -17,7 +17,7 @@ export class PetSearchComponent {
   pets: any;
   breeds: any;
   gender: any;
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   id: any;
   sid: any;
   bid: any;

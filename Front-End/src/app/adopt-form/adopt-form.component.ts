@@ -13,7 +13,7 @@ import { Application } from '../application';
 export class AdoptFormComponent implements OnInit {
   
   applicationForm: FormGroup;
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   application: any;
 
   constructor(private http: HttpClient, private router: Router) {

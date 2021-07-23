@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class PetDetailComponent implements OnInit {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   id: any;
   pets: any;
   canAdopt: any;

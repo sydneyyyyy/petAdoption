@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   pets: any;
 
   constructor(private http: HttpClient) { }

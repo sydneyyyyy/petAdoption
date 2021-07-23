@@ -19,7 +19,7 @@ export class AddPetComponent implements OnInit {
   gender: any = ['M', 'F'];
   size: any = ['S', 'M', 'L', 'XL'];
   pet: any;
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
 
   constructor(private http: HttpClient) { 
     this.addPetForm = new FormGroup({

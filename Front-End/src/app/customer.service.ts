@@ -6,7 +6,7 @@ import { Customer } from './customer';
 
 @Injectable({providedIn: 'root'})
 export class CustomerService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
 
   constructor(private http: HttpClient){}
 

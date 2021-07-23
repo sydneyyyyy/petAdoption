@@ -14,7 +14,7 @@ import { Pet } from '../pet';
 export class PetsComponent implements OnInit {
 
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   pets: any;
   isEmployee: any;
   

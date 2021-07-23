@@ -16,7 +16,7 @@ import { Employee } from '../employee';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   customers: any;
   
   loginStatus$: Observable<boolean>;

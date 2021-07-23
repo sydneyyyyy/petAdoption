@@ -10,7 +10,7 @@ import { Customer } from './customer';
 
 export class LoginService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   customers: Customer;
 
   constructor(private http: HttpClient) { }

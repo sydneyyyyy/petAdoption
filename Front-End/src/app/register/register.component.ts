@@ -15,7 +15,7 @@ import { Customer } from '../customer';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   customer: any;
 
   constructor(private http: HttpClient, private router: Router) { 

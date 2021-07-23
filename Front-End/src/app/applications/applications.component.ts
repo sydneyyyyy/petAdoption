@@ -10,7 +10,7 @@ import { Application } from '../application';
   styleUrls: ['./applications.component.css']
 })
 export class ApplicationsComponent implements OnInit {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   applicationList: any;
   id: any;
   aid: any;

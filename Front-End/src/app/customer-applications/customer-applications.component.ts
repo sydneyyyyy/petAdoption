@@ -11,7 +11,7 @@ import { Application } from '../application';
 })
 export class CustomerApplicationsComponent implements OnInit {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
 
   id: any;
   applications: any;

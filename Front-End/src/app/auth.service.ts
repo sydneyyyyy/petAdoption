@@ -17,7 +17,7 @@ export class AuthService {
   loginForm: FormGroup;
   private loggedIn: BehaviorSubject<boolean> = new 
   BehaviorSubject<boolean>(false);
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "http://localhost:8080";
   customers: any;
   employees: any;
   private empLoggedIn: BehaviorSubject<boolean> = new 
